@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables and Data Types in C</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 5px;
+            border-radius: 4px;
+            display: inline-block;
+            font-family: Consolas, monospace;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            font-family: Consolas, monospace;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Variables in C</h1>
+    <h2>What is a Variable?</h2>
+    <ul>
+        <li>A variable is a container for storing data values.</li>
+        <li>It has a name (identifier) and a type that defines what kind of data it can hold.</li>
+    </ul>
+
+    <h2>Declaring a Variable</h2>
+    <p>To declare a variable, specify the type followed by its name:</p>
+    <pre><code>int age;</code></pre>
+
+    <h2>Rules for Naming Variables</h2>
+    <ol>
+        <li>You can include letters, numbers, and underscores (_).</li>
+        <li>You cannot start with a number (e.g., <code>1name</code> is invalid).</li>
+        <li>You cannot use any keywords that are in C (e.g., <code>int</code>, <code>float</code>).</li>
+        <li>C is a case-sensitive language (e.g., <code>age</code> and <code>Age</code> are different).</li>
+    </ol>
+
+    <p>Examples of valid variables:</p>
+    <pre><code>
+char _grade = 'A';
+float salary_2023 = 55000.50;
+int Age = 30;
+    </code></pre>
+
+    <h2>Types of Variables</h2>
+    <ol>
+        <li><strong>Local Variable:</strong> Declared inside a function; accessible only within that function.</li>
+        <li><strong>Global Variable:</strong> Declared outside any function; accessible throughout the program.</li>
+        <li><strong>Static Variable:</strong> Retains its value between function calls.</li>
+        <li><strong>Extern Variable:</strong> Declared in another file; used in the current file with the <code>extern</code> keyword.</li>
+    </ol>
+
+    <h1>Data Types in C</h1>
+    <h2>What is a Data Type?</h2>
+    <ul>
+        <li>A data type specifies the type of data that a variable can hold.</li>
+        <li>C has several built-in data types.</li>
+    </ul>
+
+    <h2>Types of Data Types</h2>
+    <ol>
+        <li><strong>Basic Data Types:</strong>
+            <ul>
+                <li><strong>Integer (int):</strong> Stores whole numbers.</li>
+                <li><strong>Floating-point (float, double):</strong> Stores decimal numbers.</li>
+                <li><strong>Character (char):</strong> Stores a single character.</li>
+            </ul>
+        </li>
+        <li><strong>Void (void):</strong> Represents "no type" (used in functions with no return value).</li>
+    </ol>
+
+    <h2>Size and Range of Data Types</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Data Type</th>
+                <th>Size</th>
+                <th>Range</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>char</td>
+                <td>1 byte</td>
+                <td>-128 to 127</td>
+            </tr>
+            <tr>
+                <td>int</td>
+                <td>2 or 4 bytes</td>
+                <td>-32,768 to 32,767 / -2<sup>31</sup> to 2<sup>31</sup>-1</td>
+            </tr>
+            <tr>
+                <td>float</td>
+                <td>4 bytes</td>
+                <td>±3.4E-38 to ±3.4E+38</td>
+            </tr>
+            <tr>
+                <td>double</td>
+                <td>8 bytes</td>
+                <td>±1.7E-308 to ±1.7E+308</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Value Conversion</h2>
+    <h3>int to float</h3>
+    <pre><code>
+int a = 5;
+float b;
+b = a;
+printf("Value of b: %.2f\n", b); // Output: 5.00
+    </code></pre>
+
+    <h3>char to int</h3>
+    <pre><code>
+char c = 'A'; 
+int num;
+num = c; 
+printf("ASCII value of '%c': %d\n", c, num); // Output: ASCII value of 'A': 65
+    </code></pre>
+
+    <h2>Type Conversion (Type Casting)</h2>
+    <h3>int to float</h3>
+    <pre><code>
+int a = 5, b = 2;
+float result = (float)a / b; 
+printf("Result: %.2f\n", result); // Output: 2.50
+    </code></pre>
+</body>
+</html>
