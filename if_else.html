@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If-Else in C</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            color: #333;
+        }
+        h1, h2 {
+            color: #0056b3;
+        }
+        code, pre {
+            display: block;
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-left: 4px solid #0056b3;
+            margin: 10px 0;
+            font-family: "Courier New", Courier, monospace;
+            overflow: auto;
+        }
+        ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        p {
+            margin: 10px 0;
+        }
+        .advanced {
+            background-color: #e9f5ff;
+            padding: 10px;
+            margin-top: 20px;
+            border-left: 4px solid #0078d4;
+        }
+    </style>
+</head>
+<body>
+    <h1>If-Else in C</h1>
+    <p>In programming, you often need your code to make decisions. For example, "If it's raining, take an umbrella; otherwise, enjoy the sunshine!" In C, we use the <strong>if-else</strong> statement to make decisions in our programs.</p>
+
+    <h2>What is an If-Else Statement?</h2>
+    <p>An <strong>if</strong> checks if a condition is true. If it is, the code inside the <code>if</code> block runs. If the condition is false, you can use <strong>else</strong> to run some other code instead.</p>
+
+    <h2>How Does It Look?</h2>
+    <p>Here’s the structure of an <code>if</code> and <code>else</code>:</p>
+    <h3>If Only</h3>
+    <pre><code>if (condition) {
+    // Do this if the condition is true
+}</code></pre>
+
+    <h3>If and Else</h3>
+    <pre><code>if (condition) {
+    // Do this if the condition is true
+} else {
+    // Do this if the condition is false
+}</code></pre>
+
+    <h2>Example: Checking a Number</h2>
+    <p>Let’s say we want to check if a number is bigger than 10.</p>
+    <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int number = 15;
+
+    if (number > 10) {
+        printf("The number is greater than 10.\n");
+    } else {
+        printf("The number is 10 or less.\n");
+    }
+
+    return 0;
+}</code></pre>
+    <p><strong>What happens?</strong> If the number is 15 (which is greater than 10), the first message is printed. Try changing the value to test it!</p>
+
+    <h2>If-Else If: Multiple Conditions</h2>
+    <p>What if we want to check more than one condition? For example, we want to check if a number is positive, negative, or zero. We can use <strong>else if</strong> like this:</p>
+    <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int number = 0;
+
+    if (number > 0) {
+        printf("The number is positive.\n");
+    } else if (number < 0) {
+        printf("The number is negative.\n");
+    } else {
+        printf("The number is zero.\n");
+    }
+
+    return 0;
+}</code></pre>
+    <p>This lets us handle three cases!</p>
+
+    <h2>A Fun Example: Even or Odd?</h2>
+    <p>Let’s write a program to check if a number is even or odd:</p>
+    <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int number = 7;
+
+    if (number % 2 == 0) {
+        printf("The number is even.\n");
+    } else {
+        printf("The number is odd.\n");
+    }
+
+    return 0;
+}</code></pre>
+    <p><strong>Explanation:</strong> We check if the number divided by 2 has a remainder of 0. If yes, it's even; otherwise, it's odd.</p>
+
+    <h2>What Happens Inside an If?</h2>
+    <ul>
+        <li>The condition inside the <code>if</code> (like <code>number > 10</code>) must be something that results in either <code>true</code> or <code>false</code>.</li>
+        <li>Relational operators like <code>></code>, <code><</code>, <code>==</code> (equal to), and <code>!=</code> (not equal to) are commonly used.</li>
+    </ul>
+
+    <h2>Simple Practice</h2>
+    <p>Try writing a program that asks the user for their age and prints:</p>
+    <ul>
+        <li>"You are a child!" if the age is less than 12.</li>
+        <li>"You are a teenager!" if the age is between 13 and 19.</li>
+        <li>"You are an adult!" for anything else.</li>
+    </ul>
+    <p>Hint: You can use <code>if</code>, <code>else if</code>, and <code>else</code> to solve this!</p>
+
+    <h2>Summary</h2>
+    <p>The <strong>if-else</strong> statement is your program’s way of making decisions. It's like teaching your computer to say, "If this happens, do that. Otherwise, do something else!" Keep practicing, and you'll master it in no time!</p>
+
+    <h2>Advanced Problem</h2>
+    <div class="advanced">
+        <p>Ready for a challenge? Try solving these advanced problems related to if-else, data types, and input/output:</p>
+        <ul>
+            <li><a href="https://codeforces.com/problemset/problem/4/A" target="_blank">Problem 1: Watermelon (if-else)</a></li>
+            <li><a href="https://codeforces.com/problemset/problem/71/A" target="_blank">Problem 2: Way Too Long Words (string manipulation and input/output)</a></li>
+        </ul>
+        <p>Click on a problem to view its description and try solving it on Codeforces!</p>
+    </div>
+</body>
+</html>
