@@ -22,6 +22,7 @@
             padding: 10px;
             border-radius: 4px;
             font-family: Consolas, monospace;
+            overflow-x: auto;
         }
         table {
             border-collapse: collapse;
@@ -36,6 +37,15 @@
         th {
             background-color: #f2f2f2;
         }
+        .practice {
+            background-color: #eaf7ff;
+            padding: 10px;
+            border-left: 4px solid #0056b3;
+            margin: 20px 0;
+        }
+        .practice h3 {
+            color: #0056b3;
+        }
     </style>
 </head>
 <body>
@@ -46,9 +56,19 @@
         <li>It has a name (identifier) and a type that defines what kind of data it can hold.</li>
     </ul>
 
+    <div class="practice">
+        <h3>Practice Problem</h3>
+        <p>Write a program that declares an integer variable, assigns it a value, and prints the value.</p>
+    </div>
+
     <h2>Declaring a Variable</h2>
     <p>To declare a variable, specify the type followed by its name:</p>
     <pre><code>int age;</code></pre>
+
+    <div class="practice">
+        <h3>Practice Problem</h3>
+        <p>Declare a <code>float</code> variable named <code>temperature</code>, assign it the value 36.6, and print it.</p>
+    </div>
 
     <h2>Rules for Naming Variables</h2>
     <ol>
@@ -65,6 +85,17 @@ float salary_2023 = 55000.50;
 int Age = 30;
     </code></pre>
 
+    <div class="practice">
+        <h3>Practice Problem</h3>
+        <p>Identify the valid and invalid variable names from the following:</p>
+        <ul>
+            <li><code>1name</code></li>
+            <li><code>_myVariable</code></li>
+            <li><code>float</code></li>
+            <li><code>total_value</code></li>
+        </ul>
+    </div>
+
     <h2>Types of Variables</h2>
     <ol>
         <li><strong>Local Variable:</strong> Declared inside a function; accessible only within that function.</li>
@@ -73,6 +104,11 @@ int Age = 30;
         <li><strong>Extern Variable:</strong> Declared in another file; used in the current file with the <code>extern</code> keyword.</li>
     </ol>
 
+    <div class="practice">
+        <h3>Practice Problem</h3>
+        <p>Write a program that demonstrates the use of a global variable.</p>
+    </div>
+
     <h1>Data Types in C</h1>
     <h2>What is a Data Type?</h2>
     <ul>
@@ -80,17 +116,10 @@ int Age = 30;
         <li>C has several built-in data types.</li>
     </ul>
 
-    <h2>Types of Data Types</h2>
-    <ol>
-        <li><strong>Basic Data Types:</strong>
-            <ul>
-                <li><strong>Integer (int):</strong> Stores whole numbers.</li>
-                <li><strong>Floating-point (float, double):</strong> Stores decimal numbers.</li>
-                <li><strong>Character (char):</strong> Stores a single character.</li>
-            </ul>
-        </li>
-        <li><strong>Void (void):</strong> Represents "no type" (used in functions with no return value).</li>
-    </ol>
+    <div class="practice">
+        <h3>Practice Problem</h3>
+        <p>Declare one variable for each basic data type (<code>int</code>, <code>float</code>, <code>char</code>), assign values to them, and print the values.</p>
+    </div>
 
     <h2>Size and Range of Data Types</h2>
     <table>
@@ -125,29 +154,22 @@ int Age = 30;
         </tbody>
     </table>
 
-    <h2>Value Conversion</h2>
-    <h3>int to float</h3>
-    <pre><code>
-int a = 5;
-float b;
-b = a;
-printf("Value of b: %.2f\n", b); // Output: 5.00
-    </code></pre>
-
-    <h3>char to int</h3>
-    <pre><code>
-char c = 'A'; 
-int num;
-num = c; 
-printf("ASCII value of '%c': %d\n", c, num); // Output: ASCII value of 'A': 65
-    </code></pre>
+    <div class="practice">
+        <h3>Practice Problem</h3>
+        <p>Write a program that uses the <code>sizeof</code> operator to print the size of each data type.</p>
+    </div>
 
     <h2>Type Conversion (Type Casting)</h2>
-    <h3>int to float</h3>
+    <h3>Example: int to float</h3>
     <pre><code>
 int a = 5, b = 2;
 float result = (float)a / b; 
 printf("Result: %.2f\n", result); // Output: 2.50
     </code></pre>
+
+    <div class="practice">
+        <h3>Practice Problem</h3>
+        <p>Write a program to divide two integers and print the result as a float using type casting.</p>
+    </div>
 </body>
 </html>
