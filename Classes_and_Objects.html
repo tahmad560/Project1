@@ -84,6 +84,19 @@
         footer p {
             font-size: 1rem;
         }
+        .video-container {
+    max-width: 100%;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.video-container iframe {
+    width: 100%;
+    max-width: 640px;
+    height: 360px;
+    border: none;
+}
+
     </style>
 </head>
 <body>
@@ -160,7 +173,9 @@ public class Main {
             <li><strong>Reference Type:</strong> A reference type is any type that refers to an object (such as classes, interfaces, arrays, etc.), unlike primitive types (int, float, etc.), which store the actual value.</li>
             <li><strong>Passing by Reference:</strong> In Java, when you pass an object to a method, you're passing the reference to that object. This means that changes made to the object inside the method will affect the original object.</li>
         </ul>
-
+        <div class="video-container">
+            <iframe src="https://drive.google.com/file/d/1Q4UWOmeL0Y2jy6N07gN3KagACN59nlic/preview" width="640" height="360" allow="autoplay"></iframe>
+        </div>
         <footer>
             <p>&copy; 2024 Learn Java - All Rights Reserved</p>
         </footer>

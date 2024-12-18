@@ -84,6 +84,32 @@
         footer p {
             font-size: 1rem;
         }
+        /* Video Container Styles */
+.video-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.video-container iframe {
+    width: 80%;
+    height: 500px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.video-container h2 {
+    font-size: 1.8rem;
+    color: #004aad;
+    margin-bottom: 10px;
+}
+
+.video-container p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #555;
+}
+
     </style>
 </head>
 <body>
@@ -245,6 +271,60 @@ public class ArrayLength {
             <li><strong>Problem 2:</strong> Write a program to sum all the elements of a 2D array. Use nested loops to go through rows and columns.</li>
             <li><strong>Problem 3:</strong> Write a program to transpose a 2D array. This means swapping the rows with columns.</li>
         </ul>
+        <h2>Using Arrays of a Class in Java</h2>
+<p>In Java, an array of a class is a collection of references to objects of that class. Each element in the array is a reference, meaning it stores the memory address of an object. Arrays are useful when you need to handle multiple objects of the same type efficiently.</p>
+
+<p>Below is an example:</p>
+
+<pre><code>public class Student {
+    private String name;
+    private int age;
+
+    // Constructor
+    public Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public void displayDetails() {
+        System.out.println("Name: " + name + ", Age: " + age);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Creating an array to hold 3 Student objects
+        Student[] students = new Student[3];
+
+        // Initializing array elements with Student objects
+        students[0] = new Student("Alice", 20);
+        students[1] = new Student("Bob", 22);
+        students[2] = new Student("Charlie", 19);
+
+        // Accessing and displaying details of each student
+        for (int i = 0; i < students.length; i++) {
+            students[i].displayDetails();
+        }
+    }
+}</code></pre>
+
+<h3>Explanation</h3>
+<ul>
+    <li><strong>Reference Objects:</strong> Each element in the array is a reference to a <code>Student</code> object. The array itself is stored in memory, and each element points to an individual object in memory.</li>
+    <li><strong>Object Initialization:</strong> The array is initialized with a size, and each element is assigned a new <code>Student</code> object using the class constructor.</li>
+    <li><strong>Looping through the Array:</strong> A <code>for</code> loop is used to iterate through the array and call the <code>displayDetails()</code> method on each object.</li>
+</ul>
+
+<p>This approach allows for structured and efficient management of multiple objects of the same class.</p>
+<div class="video-container">
+    <h2>Video Title</h2>
+    <p>Watch this video to understand the concept better:</p>
+    <iframe src="https://drive.google.com/file/d/1UWYxcW9I0hdG14dYfWUfBc-vpvHY5FW3/preview" 
+            width="80%" 
+            height="500" 
+            frameborder="0" 
+            allow="autoplay"></iframe>
+</div>
 
         <footer>
             <p>&copy; 2024 Learn Java - All Rights Reserved</p>

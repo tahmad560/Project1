@@ -80,6 +80,30 @@
             color: #fff;
             margin-top: 30px;
         }
+        video-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.video-container iframe {
+    width: 80%;
+    height: 500px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.video-container h2 {
+    font-size: 1.8rem;
+    color: #004aad;
+    margin-bottom: 10px;
+}
+
+.video-container p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #555;
+}
 
         footer p {
             font-size: 1rem;
@@ -388,6 +412,10 @@ char grade = scanner.next().charAt(0); // Correct way to take single character i
 
 <p><strong>Why not use <code>next()</code> for characters?</strong> If you use <code>next()</code> alone, it will read the entire word, and if the user enters more than one character (e.g., "A+" instead of just "A"), <code>next()</code> will return the entire string. To avoid this, we extract just the first character using <code>charAt(0)</code>.</p>
 
+<div class="video-container">
+    <h2>Video Tutorial on Introduction to Java</h2>
+    <iframe src="https://drive.google.com/file/d/1iEyqaT3YkMja_1F7rxV0XSFyXV7gSyH1/preview" allow="autoplay"></iframe>
+</div>
 
         <footer>
             <p>&copy; 2024 Learn Java - All Rights Reserved</p>
