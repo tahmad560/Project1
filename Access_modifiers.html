@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Modifiers in Java</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f7faff;
+            color: #333;
+        }
+
+        header {
+            background: #004aad;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 30px auto;
+            line-height: 1.6;
+        }
+
+        h2 {
+            color: #004aad;
+        }
+
+        .code-block {
+            background-color: #f4f4f9;
+            border-left: 4px solid #004aad;
+            padding: 15px;
+            margin: 20px 0;
+            font-family: monospace;
+            font-size: 1rem;
+            overflow-x: auto;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+        }
+
+        th {
+            background-color: #f4f4f9;
+            color: #004aad;
+        }
+
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Understanding Access Modifiers in Java</h1>
+</header>
+
+<div class="content">
+    <h2>What are Access Modifiers?</h2>
+    <p>Access modifiers in Java define the visibility or scope of classes, methods, and variables. They control where these elements can be accessed from.</p>
+
+    <h2>Types of Access Modifiers</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Modifier</th>
+                <th>Class</th>
+                <th>Package</th>
+                <th>Subclass</th>
+                <th>World</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>public</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>✅</td>
+            </tr>
+            <tr>
+                <td>protected</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>❌</td>
+            </tr>
+            <tr>
+                <td>default</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>❌</td>
+            </tr>
+            <tr>
+                <td>private</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>❌</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Examples</h2>
+
+    <h3>1. Public Modifier</h3>
+    <div class="code-block">
+        <pre>
+public class PublicExample {
+    public void display() {
+        System.out.println("This is a public method!");
+    }
+}
+        </pre>
+    </div>
+
+    <h3>2. Private Modifier</h3>
+    <div class="code-block">
+        <pre>
+public class PrivateExample {
+    private String message = "This is private!";
+
+    private void displayMessage() {
+        System.out.println(message);
+    }
+}
+        </pre>
+    </div>
+
+    <h3>3. Protected Modifier</h3>
+    <div class="code-block">
+        <pre>
+package mypackage;
+
+public class ProtectedExample {
+    protected void display() {
+        System.out.println("This is a protected method!");
+    }
+}
+        </pre>
+    </div>
+
+    <h3>4. Default Modifier</h3>
+    <div class="code-block">
+        <pre>
+class DefaultExample {
+    void display() {
+        System.out.println("This is a default access method!");
+    }
+}
+        </pre>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Java Access Modifiers Tutorial. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

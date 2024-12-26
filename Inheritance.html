@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding Inheritance in Java with <code>super</code> and <code>super()</code></title>
+   <style>
+    /* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container styling */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+/* Header styling */
+header {
+    text-align: center;
+    margin: 20px 0;
+}
+
+header h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+/* Section styling */
+section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Intro section */
+.intro p {
+    font-size: 16px;
+    color: #444;
+}
+
+/* Super keyword section */
+.super-keyword ul {
+    list-style-type: square;
+    margin-left: 20px;
+}
+
+.super-keyword li {
+    font-size: 16px;
+    color: #444;
+}
+
+/* Code section styling */
+.code-example {
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+pre {
+    background-color: #2d2d2d;
+    color: #f8f8f8;
+    padding: 20px;
+    border-radius: 5px;
+    overflow-x: auto;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+}
+
+code {
+    display: block;
+    white-space: pre-wrap;
+}
+
+/* Output section styling */
+.output {
+    background-color: #e0e0e0;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.output p {
+    font-size: 16px;
+    color: #333;
+}
+
+strong {
+    color: #d9534f;
+}
+
+/* Explanation section styling */
+.explanation p {
+    font-size: 16px;
+    color: #444;
+}
+
+.explanation ol {
+    margin-left: 20px;
+}
+
+.explanation li {
+    font-size: 16px;
+    color: #444;
+}
+
+   </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Inheritance in Java </code></h1>
+        </header>
+
+        <section class="intro">
+            <h2>What is Inheritance in Java?</h2>
+            <p>
+                Inheritance is a fundamental concept in Object-Oriented Programming (OOP) that allows one class (child class) to inherit fields and methods from another class (parent class). 
+                This helps to promote reusability of code. The child class can access the properties and behaviors (methods) of the parent class, and it can also override or add new functionalities.
+            </p>
+            <p>
+                In Java, a class inherits from another using the <strong>extends</strong> keyword. This allows the child class to inherit all public and protected members of the parent class, except constructors.
+            </p>
+        </section>
+
+        <section class="super-keyword">
+            <h2>The <code>super</code> Keyword</h2>
+            <p>
+                The <code>super</code> keyword is used in Java to refer to the parent class. It is commonly used in two ways:
+            </p>
+            <ul>
+                <li><strong>Calling parent class methods:</strong> You can use <code>super</code> to call a method from the parent class, even if it has been overridden in the child class.</li>
+                <li><strong>Accessing parent class constructors:</strong> You can use <code>super()</code> to call a constructor from the parent class, especially when the parent class constructor takes parameters.</li>
+            </ul>
+        </section>
+
+        <section class="code-example">
+            <h2>Java Code Example: Inheritance with <code>super</code> and <code>super()</code></h2>
+            <pre>
+                <code>
+class Animal {
+    // Instance variable
+    String name;
+
+    // Constructor
+    Animal(String name) {
+        this.name = name;  // Initialize the name
+        System.out.println("Animal Constructor Called");
+    }
+
+    // Method
+    void speak() {
+        System.out.println("The animal makes a sound.");
+    }
+}
+
+class Dog extends Animal {
+    // Constructor of the subclass
+    Dog(String name) {
+        super(name);  // Calling the constructor of the parent class (Animal)
+        System.out.println("Dog Constructor Called");
+    }
+
+    // Overriding the speak method
+    @Override
+    void speak() {
+        super.speak();  // Calling the parent class method
+        System.out.println("The dog barks.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Dog dog = new Dog("Buddy");  // Creating a Dog object
+        dog.speak();  // Calling the speak method of Dog
+    }
+}
+                </code>
+            </pre>
+        </section>
+
+        <section class="output">
+            <h2>Expected Output:</h2>
+            <p><strong>Animal Constructor Called</strong></p>
+            <p><strong>Dog Constructor Called</strong></p>
+            <p>The animal makes a sound.</p>
+            <p>The dog barks.</p>
+        </section>
+
+        <section class="explanation">
+            <h2>Explanation of the Code</h2>
+            <p><strong>Inheritance:</strong> In the code above, we have two classes: <code>Animal</code> and <code>Dog</code>. The <code>Dog</code> class inherits from the <code>Animal</code> class using the <code>extends</code> keyword. This means the <code>Dog</code> class automatically has access to all non-private fields and methods of the <code>Animal</code> class.</p>
+
+            <p><strong>super() Constructor:</strong> The <code>super()</code> keyword is used in the constructor of the <code>Dog</code> class to call the constructor of the parent class (<code>Animal</code>). This allows us to initialize the <code>name</code> field in the <code>Animal</code> class before executing the <code>Dog</code> class constructor code. If we didn't explicitly call <code>super()</code>, the parent class constructor would be called automatically, but it’s good practice to include it when parameters are passed.</p>
+
+            <p><strong>super Keyword for Method Calls:</strong> The <code>super.speak()</code> method in the <code>Dog</code> class calls the <code>speak()</code> method from the parent class (<code>Animal</code>). This demonstrates that the child class can use <code>super</code> to access methods from the parent class, even if they are overridden in the child class. In this case, the parent class's <code>speak()</code> method prints "The animal makes a sound," and the child class adds its own behavior ("The dog barks.").</p>
+
+            <p><strong>Output Breakdown:</strong> When we run the program:
+                <ol>
+                    <li>The <code>Dog</code> constructor is called, which calls the parent <code>Animal</code> constructor first (via <code>super(name)</code>), initializing the <code>name</code> field.</li>
+                    <li>The output shows that the <code>Animal</code> constructor is called first, followed by the <code>Dog</code> constructor.</li>
+                    <li>Then, the <code>speak()</code> method of <code>Dog</code> is invoked. The <code>super.speak()</code> call first executes the parent class's <code>speak()</code> method, followed by the overridden method in the child class.</li>
+                </ol>
+            </p>
+        </section>
+    </div>
+</body>
+</html>
