@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Structure in C Programming</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background: #0078d7;
+            color: white;
+            padding: 10px 15px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            color: #0078d7;
+        }
+
+        .code-block {
+            background: #f0f0f0;
+            border-left: 5px solid #0078d7;
+            padding: 10px;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background: #0078d7;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Structure in C Programming</h1>
+    </header>
+
+    <div class="container">
+        <h2>Definition</h2>
+        <p>In C, a <strong>structure</strong> is a user-defined data type that allows grouping variables of different types together under a single name.</p>
+
+        <h2>Syntax</h2>
+        <div class="code-block">
+            <pre>
+struct StructureName {
+    dataType member1;
+    dataType member2;
+    // ... more members
+};
+            </pre>
+        </div>
+
+        <h2>Example</h2>
+        <p>Here’s an example of defining and using a structure:</p>
+        <div class="code-block">
+            <pre>
+#include <stdio.h>
+
+struct Student {
+    int id;
+    char name[50];
+    float marks;
+};
+
+int main() {
+    struct Student s1 = {1, "Alice", 85.5};
+
+    printf("ID: %d\n", s1.id);
+    printf("Name: %s\n", s1.name);
+    printf("Marks: %.2f\n", s1.marks);
+
+    return 0;
+}
+            </pre>
+        </div>
+
+        <h2>Other Ways to Input Data in Structures</h2>
+
+        <h3>1. Using <code>scanf</code> for Individual Members</h3>
+        <div class="code-block">
+            <pre>
+#include <stdio.h>
+
+struct Student {
+    int id;
+    char name[50];
+    float marks;
+};
+
+int main() {
+    struct Student s1;
+
+    printf("Enter ID: ");
+    scanf("%d", &s1.id);
+
+    printf("Enter Name: ");
+    scanf(" %[^"]", s1.name);
+
+    printf("Enter Marks: ");
+    scanf("%f", &s1.marks);
+
+    printf("\nStudent Details:\n");
+    printf("ID: %d\n", s1.id);
+    printf("Name: %s\n", s1.name);
+    printf("Marks: %.2f\n", s1.marks);
+
+    return 0;
+}
+            </pre>
+        </div>
+
+        <h3>2. Using a Function</h3>
+        <div class="code-block">
+            <pre>
+#include <stdio.h>
+
+struct Student {
+    int id;
+    char name[50];
+    float marks;
+};
+
+void inputStudent(struct Student *s) {
+    printf("Enter ID: ");
+    scanf("%d", &s->id);
+
+    printf("Enter Name: ");
+    scanf(" %[^"]", s->name);
+
+    printf("Enter Marks: ");
+    scanf("%f", &s->marks);
+}
+
+int main() {
+    struct Student s1;
+
+    printf("Enter details for the student:\n");
+    inputStudent(&s1);
+
+    printf("\nStudent Details:\n");
+    printf("ID: %d\n", s1.id);
+    printf("Name: %s\n", s1.name);
+    printf("Marks: %.2f\n", s1.marks);
+
+    return 0;
+}
+            </pre>
+        </div>
+
+        <h3>3. Using Loops for Arrays of Structures</h3>
+        <div class="code-block">
+            <pre>
+#include <stdio.h>
+
+struct Student {
+    int id;
+    char name[50];
+    float marks;
+};
+
+int main() {
+    int n;
+    printf("Enter the number of students: ");
+    scanf("%d", &n);
+
+    struct Student students[n];
+
+    for (int i = 0; i < n; i++) {
+        printf("\nEnter details for student %d:\n", i + 1);
+        printf("Enter ID: ");
+        scanf("%d", &students[i].id);
+        printf("Enter Name: ");
+        scanf(" %[^"]", students[i].name);
+        printf("Enter Marks: ");
+        scanf("%f", &students[i].marks);
+    }
+
+    printf("\nStudent Details:\n");
+    for (int i = 0; i < n; i++) {
+        printf("ID: %d, Name: %s, Marks: %.2f\n", students[i].id, students[i].name, students[i].marks);
+    }
+
+    return 0;
+}
+            </pre>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Learn Programming Concepts</p>
+    </footer>
+</body>
+</html>
