@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Programming Overview</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7fc;
+            color: #333;
+        }
+
+        header {
+            background: #1c2833; /* Dark blue for header */
+            color: #fff;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-bottom: 5px solid #4CAF50; /* Green underline for emphasis */
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        section {
+            max-width: 900px;
+            margin: 30px auto;
+            background: #fff;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid #4CAF50;
+        }
+
+        h2 {
+            color: #34495e;
+            font-size: 2rem;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin: 15px 0;
+            color: #555;
+            font-size: 1.1rem;
+        }
+
+        ul {
+            list-style-type: square;
+            margin: 15px 20px;
+            color: #555;
+            font-size: 1.1rem;
+        }
+
+        .code {
+            background: #fafafa;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            color: #2c3e50;
+            border: 1px solid #ddd;
+            margin: 20px 0;
+        }
+
+        .highlight {
+            background-color: #e8f5e9;
+            border-left: 6px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            font-size: 1.1rem;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            margin: 30px 0;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #1c2833;
+            color: #fff;
+            font-size: 1.1rem;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            section {
+                padding: 20px;
+                margin: 10px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            footer p {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Hover Effects for Links */
+        a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the World of Java Programming</h1>
+    </header>
+
+    <section>
+        <h2>What is Java?</h2>
+        <p>Java is a high-level, object-oriented programming language renowned for its simplicity and cross-platform compatibility. Developed by <strong>James Gosling</strong> at Sun Microsystems in 1995, Java continues to be a cornerstone of the software industry.</p>
+        <p>Its "<em>write once, run anywhere</em>" philosophy ensures seamless application deployment across different platforms, powered by the Java Virtual Machine (JVM).</p>
+        <div class="highlight">
+            <strong>Key Features:</strong>
+            <ul>
+                <li>Robust and secure</li>
+                <li>Automatic memory management</li>
+                <li>Extensive standard libraries</li>
+                <li>Platform independence</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>How Was Java Named?</h2>
+        <p>The story behind Java’s name is both fascinating and symbolic, reflecting the creativity and enthusiasm of its creators:</p>
+        <ul>
+            <li><strong>Original Name: Oak</strong> – When James Gosling and his team at Sun Microsystems began working on the language in 1991, they named it "Oak," inspired by a majestic oak tree outside Gosling’s office. It symbolized strength and stability.</li>
+            <li><strong>Why the Change?</strong> – Unfortunately, the name "Oak" was already trademarked by another company. Faced with this challenge, the team had to brainstorm a new name.</li>
+            <li><strong>The Birth of Java:</strong> During an intense brainstorming session, the team wanted a name that was unique, dynamic, and memorable. The word "Java" emerged, inspired by their love for coffee. The name not only honored their caffeinated brainstorming sessions but also symbolized energy, creativity, and innovation.</li>
+        </ul>
+        <p>The coffee theme stuck, which is why Java’s iconic logo features a steaming coffee cup, further connecting the language to its lively origins.</p>
+    </section>
+
+    <section>
+        <h2>Advantages of Learning Java</h2>
+        <p>Why should you dive into Java? Here’s why:</p>
+        <ul>
+            <li>Widely used in various industries.</li>
+            <li>Beginner-friendly syntax and rich documentation.</li>
+            <li>Suitable for multiple application types, including desktop, web, and mobile.</li>
+            <li>Strong community support and career opportunities.</li>
+            <li>Highly secure and efficient memory management.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Applications of Java</h2>
+        <p>Java’s versatility powers a variety of domains:</p>
+        <ul>
+            <li><strong>Banking:</strong> Secure backend operations.</li>
+            <li><strong>Android Development:</strong> Foundation for mobile apps.</li>
+            <li><strong>Web Applications:</strong> Robust frameworks like Spring.</li>
+            <li><strong>Game Development:</strong> Titles like Minecraft.</li>
+            <li><strong>Big Data:</strong> Tools like Hadoop and Spark.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>By Which Language Was Java Written?</h2>
+        <p>Java’s foundations lie in:</p>
+        <ul>
+            <li><strong>C:</strong> For JVM implementation.</li>
+            <li><strong>C++:</strong> Used in the Java Development Kit (JDK).</li>
+            <li><strong>Java:</strong> Evolved for libraries and frameworks.</li>
+        </ul>
+        <p>Modern JVMs like HotSpot and GraalVM showcase Java’s adaptability and growth.</p>
+    </section>
+
+    <section>
+        <h2>Getting Started with Java</h2>
+        <p>Here’s your roadmap to mastering Java:</p>
+        <ol>
+            <li><strong>Set Up:</strong> Download and install the Java Development Kit (JDK).</li>
+            <li><strong>Choose an IDE:</strong> Tools like IntelliJ IDEA or Eclipse simplify coding.</li>
+            <li><strong>First Program:</strong> Write your first Java code:
+                <pre><div class="code">
+                    public class HelloWorld {
+                        public static void main(String[] args) {
+                            System.out.println("Hello, World!");
+                        }
+                    }
+                </div>
+            </pre>
+            </li>
+            <li><strong>Understand Basics:</strong> Learn syntax, data types, and control structures.</li>
+            <li><strong>Advanced Learning:</strong> Explore frameworks like Spring, Hibernate, and JavaFX.</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Learn More with this Video:</h2>
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/qVwXBPS05Vo?si=I8iMl5EQAavKDPLh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <footer>
+        <p>Happy Coding! Start your Java journey today and unlock endless possibilities.</p>
+    </footer>
+</body>
+</html>
