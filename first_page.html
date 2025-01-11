@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Programming Topics</title>
+    <meta name="description" content="Explore key concepts of Java programming with detailed examples and explanations for each topic.">
+    <meta name="keywords" content="Java, Java Programming, Classes, Objects, Arrays, OOP, Inheritance, Polymorphism, Encapsulation, Abstraction">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to bottom, #a1c4fd, #c2e9fb); /* Soft gradient background */
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+        }
+
+        /* Header Section */
+        header {
+            width: 100%;
+            background-color: #007acc; /* Strong blue background */
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+            border-bottom: 4px solid #005c99;
+            transition: all 0.3s ease;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        header p {
+            margin: 10px 0 0;
+            font-size: 1.5rem;
+            opacity: 0.85;
+        }
+
+        /* Navigation Section */
+        nav {
+            margin: 40px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: white;
+            background-color: #007acc;
+            padding: 15px 25px;
+            border-radius: 10px;
+            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            flex: 1 1 calc(250px - 30px); /* Adjusting the width of links */
+            max-width: 250px;
+            font-size: 1.3rem;
+        }
+
+        nav a:hover {
+            background-color: #005c99;
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        nav a:focus {
+            outline: 2px solid #fff;
+            outline-offset: 2px;
+        }
+
+        /* Footer Section */
+        footer {
+            padding: 20px 10px;
+            width: 100%;
+            text-align: center;
+            background-color: #004aad;
+            color: #f4f4f9;
+            border-top: 4px solid #005c99;
+            box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        footer p:hover {
+            color: #f1f1f1;
+            text-shadow: 0px 0px 8px #f1f1f1;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+
+            header p {
+                font-size: 1.1rem;
+            }
+
+            nav a {
+                font-size: 1.1rem;
+                padding: 12px 18px;
+            }
+
+            footer p {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Hover Animations */
+        @keyframes hoverPulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 10px rgba(0, 122, 204, 0.4);
+            }
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 0 20px rgba(0, 122, 204, 0.6);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 10px rgba(0, 122, 204, 0.4);
+            }
+        }
+
+        nav a:hover {
+            animation: hoverPulse 0.8s ease-out;
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- Header Section -->
+<header>
+    <h1>Java Programming Topics</h1>
+    <p>Learn key concepts of Java with examples</p>
+</header>
+
+<!-- Navigation Section -->
+<nav aria-label="Java Programming Topics Navigation">
+    <a href="Introduction_to_Java.html">Introduction to Java</a>
+    <a href="data_types_and_variables.html">Data types and Variables</a>
+    <!-- More links can be added here -->
+</nav> 
+
+<!-- Footer Section -->
+<footer>
+    <p>&copy; 2024 Java Programming Topics. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
