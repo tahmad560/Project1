@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Data Types and Variables</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7fc;
+            color: #333;
+        }
+
+        header {
+            background: #1c2833; /* Dark blue */
+            color: #fff;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-bottom: 5px solid #4CAF50; /* Green underline */
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        section {
+            max-width: 900px;
+            margin: 30px auto;
+            background: #fff;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid #4CAF50;
+        }
+
+        h2 {
+            color: #34495e;
+            font-size: 2rem;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin: 15px 0;
+            color: #555;
+            font-size: 1.1rem;
+        }
+
+        ul {
+            list-style-type: square;
+            margin: 15px 20px;
+            color: #555;
+            font-size: 1.1rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        table th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .code {
+            background: #fafafa;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            color: #2c3e50;
+            border: 1px solid #ddd;
+            margin: 20px 0;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            margin: 30px 0;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #1c2833;
+            color: #fff;
+            font-size: 1.1rem;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 20px;
+                margin: 10px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            footer p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Java Data Types and Variables</h1>
+    </header>
+
+    <section>
+        <h2>Introduction to Variables</h2>
+        <p>Variables in Java store data with specific data types. Here's an example:</p>
+        <div class="code">
+            int age = 25;<br>
+            double salary = 50000.50;<br>
+            String name = "John";
+        </div>
+    </section>
+
+    <section>
+        <h2>Primitive Data Types</h2>
+        <p>Java's primitive types:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Type</th>
+                    <th>Size</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>int</td>
+                    <td>4 bytes</td>
+                    <td>Stores integers</td>
+                    <td>42</td>
+                </tr>
+                <tr>
+                    <td>double</td>
+                    <td>8 bytes</td>
+                    <td>Precise decimal values</td>
+                    <td>3.14</td>
+                </tr>
+                <tr>
+                    <td>char</td>
+                    <td>2 bytes</td>
+                    <td>Single character</td>
+                    <td>'A'</td>
+                </tr>
+                <tr>
+                    <td>boolean</td>
+                    <td>1 bit</td>
+                    <td>True/false</td>
+                    <td>true</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>Non-Primitive Data Types</h2>
+        <p>Non-primitive data types are more complex and include:</p>
+        <ul>
+            <li><strong>String:</strong> Represents a sequence of characters. Example: "Hello, World!"</li>
+            <li><strong>Arrays:</strong> Stores multiple values of the same type. Example: <code>int[] numbers = {1, 2, 3};</code></li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Practice Problems</h2>
+        <ol>
+            <li><strong>Swap Two Numbers:</strong>
+                <p>Write a program that swaps the values of two variables without using a third variable.</p>
+            </li>
+            <li><strong>User Input:</strong>
+                <p>Create a program that:</p>
+                <ul>
+                    <li>Takes user input for their name, age, and salary.</li>
+                    <li>Displays the details in a formatted message.</li>
+                </ul>
+            </li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Watch the Video</h2>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/53KUNJBZC3o" title="Java Variables and Data Types" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <footer>
+        <p>Happy Coding! Keep learning Java.</p>
+    </footer>
+</body>
+</html>
