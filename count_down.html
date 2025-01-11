@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Lectures</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to bottom, #001f3f, #0074d9, #7fdbff);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            margin: 15px 0 0;
+            font-size: 1.5rem;
+            opacity: 0.9;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 25px;
+            margin: 50px 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(to right, #0074d9, #001f3f);
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+            transition: background 0.4s ease, transform 0.2s ease, box-shadow 0.4s ease;
+        }
+
+        .btn:hover {
+            background: linear-gradient(to right, #001f3f, #0074d9);
+            transform: scale(1.05);
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .countdown-btn {
+            display: inline-block;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fff;
+            background: linear-gradient(to right, #ff5733, #c70039);
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+            animation: pulse 2s infinite;
+            transition: background 0.4s ease, transform 0.2s ease, box-shadow 0.4s ease;
+        }
+
+        .countdown-btn:hover {
+            background: linear-gradient(to right, #c70039, #ff5733);
+            transform: scale(1.1);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 10px rgba(255, 87, 51, 0.5);
+            }
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 0 20px rgba(255, 87, 51, 0.7);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 10px rgba(255, 87, 51, 0.5);
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #001f3f;
+            color: #e0e7ff;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+        }
+
+        footer p:hover {
+            color: #7fdbff;
+            text-shadow: 0px 0px 10px #7fdbff;
+            transition: color 0.4s ease, text-shadow 0.4s ease;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+
+            header p {
+                font-size: 1.2rem;
+            }
+
+            .btn, .countdown-btn {
+                font-size: 1.2rem;
+                padding: 12px 30px;
+            }
+
+            footer p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to Programming Lectures</h1>
+        <p>Empowering your coding journey, one language at a time</p>
+    </header>
+
+    <main>
+        <a href="first_page.html" class="btn">Java Programming Lectures</a>
+        <a href="count_down.html" class="countdown-btn" id="countdown-btn">Java Challenge Timing</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Programming Lectures. Designed with care.</p>
+    </footer>
+
+    <script>
+        window.onload = function() {
+            const now = new Date();
+            const storedDeadline = localStorage.getItem('challengeDeadline');
+
+            let eightWeeksFromNow;
+            if (!storedDeadline) {
+                eightWeeksFromNow = new Date(now.getTime() + 8 * 7 * 24 * 60 * 60 * 1000);
+                localStorage.setItem('challengeDeadline', eightWeeksFromNow);
+            } else {
+                eightWeeksFromNow = new Date(storedDeadline);
+            }
+
+            function updateCountdown() {
+                const currentTime = new Date().getTime();
+                const timeRemaining = eightWeeksFromNow - currentTime;
+
+                if (timeRemaining <= 0) {
+                    document.getElementById('countdown-btn').textContent = 'The Java Challenge has ended!';
+                    return;
+                }
+
+                const weeks = Math.floor(timeRemaining / (7 * 24 * 60 * 60 * 1000));
+                const days = Math.floor((timeRemaining % (7 * 24 * 60 * 60 * 1000)) / (24 * 60 * 60 * 1000));
+                const hours = Math.floor((timeRemaining % (24 * 60 * 60 * 1000)) / (60 * 60 * 1000));
+                const minutes = Math.floor((timeRemaining % (60 * 60 * 1000)) / (60 * 1000));
+                const seconds = Math.floor((timeRemaining % (60 * 1000)) / 1000);
+
+                document.getElementById('countdown-btn').textContent = `Time Remaining: ${weeks}W ${days}D ${hours}H ${minutes}M ${seconds}S`;
+            }
+
+            setInterval(updateCountdown, 1000);
+            updateCountdown();
+        }
+    </script>
+
+</body>
+</html>
