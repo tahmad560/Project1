@@ -10,62 +10,138 @@
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
             font-family: 'Roboto', sans-serif;
-            background: linear-gradient(to bottom, #f4f4f9, #e0e7ff);
-            color: #333;
+            background: linear-gradient(to bottom, #001f3f, #0074d9, #7fdbff);
+            color: #fff;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
         }
+
         header {
-            background-color: #004aad;
+            background-color: #003366;
             color: white;
             text-align: center;
-            padding: 30px 20px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 40px 20px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
         }
+
         header h1 {
             margin: 0;
-            font-size: 2.5rem;
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
+
         header p {
-            margin: 10px 0 0;
-            font-size: 1.2rem;
+            margin: 15px 0 0;
+            font-size: 1.5rem;
+            opacity: 0.9;
         }
+
         main {
-            flex: 1; /* Makes the main content fill available space */
+            flex: 1;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 20px;
-            margin: 40px 20px;
+            gap: 25px;
+            margin: 50px 20px;
         }
+
         .btn {
             display: inline-block;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
+            font-weight: bold;
             color: white;
-            background-color: #004aad;
-            padding: 15px 30px;
+            background: linear-gradient(to right, #0074d9, #001f3f);
+            padding: 15px 40px;
             text-decoration: none;
-            border-radius: 5px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.3s ease, transform 0.2s ease;
+            border-radius: 50px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+            transition: background 0.4s ease, transform 0.2s ease, box-shadow 0.4s ease;
         }
+
         .btn:hover {
-            background-color: #002d72;
-            transform: translateY(-3px);
+            background: linear-gradient(to right, #001f3f, #0074d9);
+            transform: scale(1.05);
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
         }
+
+        .countdown-btn {
+            display: inline-block;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fff;
+            background: linear-gradient(to right, #ff5733, #c70039);
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+            animation: pulse 2s infinite;
+            transition: background 0.4s ease, transform 0.2s ease, box-shadow 0.4s ease;
+        }
+
+        .countdown-btn:hover {
+            background: linear-gradient(to right, #c70039, #ff5733);
+            transform: scale(1.1);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 10px rgba(255, 87, 51, 0.5);
+            }
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 0 20px rgba(255, 87, 51, 0.7);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 10px rgba(255, 87, 51, 0.5);
+            }
+        }
+
         footer {
             text-align: center;
             padding: 20px;
-            background-color: #f4f4f9;
-            color: #666;
-            border-top: 1px solid #ddd;
+            background-color: #001f3f;
+            color: #e0e7ff;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
+
         footer p {
             margin: 0;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+        }
+
+        footer p:hover {
+            color: #7fdbff;
+            text-shadow: 0px 0px 10px #7fdbff;
+            transition: color 0.4s ease, text-shadow 0.4s ease;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+
+            header p {
+                font-size: 1.2rem;
+            }
+
+            .btn, .countdown-btn {
+                font-size: 1.2rem;
+                padding: 12px 30px;
+            }
+
+            footer p {
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>
@@ -77,10 +153,11 @@
     </header>
 
     <main>
-        <a href="c_programming_lectures.html" class="btn">C Programming Lectures</a>
+        <!-- <a href="c_programming_lectures.html" class="btn">C Programming Lectures</a> -->
         <a href="first_page.html" class="btn">Java Programming Lectures</a>
-        <!-- <a href="dsa/dsa_topics.html" class="btn">Data Structures & Algorithms</a> <!-- Added DSA Link -->
+        <!-- <a href="dsa/dsa_topics.html" class="btn">Data Structures & Algorithms</a> -->
         <!-- <a href="website.html">Meet the members</a>  -->
+        <a href="count_down.html" class="countdown-btn">Java Challenge Timing</a>
     </main>
 
     <footer>
