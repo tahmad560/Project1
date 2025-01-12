@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Flow - If-Else, Else-If, Nested If-Else, and Switch-Case</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .container:hover {
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #666;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-top: 20px;
+            color: #333;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            margin-top: 15px;
+            color: #444;
+        }
+
+        pre {
+            background-color: #f1f1f1;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 1.1rem;
+            margin-top: 10px;
+            color: #333;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .video-container {
+            margin: 30px auto;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 1rem;
+            color: #888;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+
+        footer p {
+            margin: 10px 0;
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 2.4rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            h3 {
+                font-size: 1.2rem;
+            }
+
+            pre {
+                font-size: 1rem;
+            }
+            
+            iframe {
+                width: 100%;
+                height: 315px; /* Maintain aspect ratio for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Mastering Conditional Logic: If-Else, Else-If, Nested If-Else, and Switch-Case</h1>
+            <p>Explore how to control the flow of your Java program using <strong>if-else</strong>, <strong>else-if</strong>, <strong>nested if-else</strong>, and <strong>switch-case</strong> statements.</p>
+        </header>
+
+        <section class="if-else">
+            <h2>Understanding If-Else and Else-If Statements</h2>
+            <p>The <strong>if-else</strong> statement allows you to execute a block of code based on a condition. It's a simple way to make decisions in your code, directing it to different paths depending on whether the condition is true or false.</p>
+            
+            <h3>Syntax:</h3>
+            <pre>
+if (condition) {
+    // code block if condition is true
+} else {
+    // code block if condition is false
+}
+            </pre>
+
+            <h3>Else-If:</h3>
+            <p>The <strong>else-if</strong> statement allows you to check multiple conditions in a single block. If the first condition is false, the program checks the next condition and so on.</p>
+            <pre>
+if (condition1) {
+    // code block for condition1
+} else if (condition2) {
+    // code block for condition2
+} else {
+    // code block if no conditions are true
+}
+            </pre>
+
+            <h3>Example:</h3>
+            <p>Here's an example that categorizes a person based on their age:</p>
+            <pre>
+int age = 20;
+if (age < 13) {
+    System.out.println("Child");
+} else if (age < 20) {
+    System.out.println("Teenager");
+} else {
+    System.out.println("Adult");
+}
+            </pre>
+        </section>
+
+        <section class="nested-if-else">
+            <h2>Nested If-Else Statements</h2>
+            <p><strong>Nested if-else</strong> allows you to place one <code>if</code> or <code>else-if</code> statement inside another. This is useful when you need to evaluate multiple conditions in a hierarchical manner.</p>
+            
+            <h3>Syntax:</h3>
+            <pre>
+if (condition1) {
+    if (condition2) {
+        // code block for condition2
+    } else {
+        // code block for condition2 false
+    }
+} else {
+    // code block for condition1 false
+}
+            </pre>
+
+            <h3>Example:</h3>
+            <p>In this example, we first check if a person is an adult, and then if they are eligible to vote:</p>
+            <pre>
+int age = 20;
+if (age >= 18) {
+    if (age >= 21) {
+        System.out.println("Adult and eligible to vote");
+    } else {
+        System.out.println("Adult but not eligible to vote");
+    }
+} else {
+    System.out.println("Not an adult");
+}
+            </pre>
+        </section>
+
+        <section class="switch-case">
+            <h2>Switch-Case Statement</h2>
+            <p>The <strong>switch-case</strong> statement is used to select one of many blocks of code to be executed. It's often used when you have multiple conditions based on a single variable, making the code cleaner and easier to read.</p>
+            
+            <h3>Syntax:</h3>
+            <pre>
+switch (expression) {
+    case value1:
+        // code block for value1
+        break;
+    case value2:
+        // code block for value2
+        break;
+    default:
+        // code block if no match
+}
+            </pre>
+
+            <h3>Example:</h3>
+            <p>Here's an example of a simple menu using a switch-case statement:</p>
+            <pre>
+int choice = 2;
+switch (choice) {
+    case 1:
+        System.out.println("Start the program");
+        break;
+    case 2:
+        System.out.println("Exit the program");
+        break;
+    default:
+        System.out.println("Invalid choice");
+}
+            </pre>
+        </section>
+
+        <div class="video-container">
+            <h2>Watch this Tutorial</h2>
+            <iframe width="800" height="400" src="https://www.youtube.com/embed/ymm0RPkIdj8?si=OrvC81l4hemcVC1S" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Programming Website | Learn Java</p>
+        </footer>
+    </div>
+</body>
+</html>
