@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input and Output in Java</title>
+    <style>
+        /* General styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Main content */
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+h1, h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+/* Paragraphs */
+p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Links */
+a {
+    color: #4CAF50;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #45a049;
+    text-decoration: underline;
+}
+
+/* Buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    width: 100%;
+    margin-top: 30px;
+    font-size: 0.9rem;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 0 10px;
+    }
+
+    main {
+        margin: 10px;
+        padding: 20px;
+    }
+
+    header {
+        padding: 15px 0;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Input and Output in Java</h1>
+    </header>
+    <main>
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>In Java, input and output (I/O) operations are essential for interacting with the user or external systems. Java provides several methods and classes to handle input and output efficiently.</p>
+        </section>
+
+        <section id="input">
+            <h2>Taking Input in Java</h2>
+            <p>To take input from the user, the <code>Scanner</code> class is commonly used. It is part of the <code>java.util</code> package.</p>
+            <h3>Example: Taking User Input</h3>
+            <pre>
+<code>import java.util.Scanner;
+
+public class InputExample {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter your name: ");
+        String name = scanner.nextLine();
+
+        System.out.print("Enter your age: ");
+        int age = scanner.nextInt();
+
+        System.out.println("Hello, " + name + ". You are " + age + " years old.");
+
+        scanner.close();
+    }
+}</code>
+            </pre>
+            <p><strong>Explanation:</strong> The <code>Scanner</code> class allows us to read input of various types, such as strings, integers, and doubles, from the keyboard.</p>
+            <h3>Methods for Input</h3>
+            <ul>
+                <li><code>nextLine()</code>: Reads a complete line of text input as a string. It's commonly used for reading names, sentences, or any input containing spaces.</li>
+                <li><code>nextInt()</code>: Reads the next integer from the input. It is used when you need to read numbers.</li>
+                <li><code>nextDouble()</code>: Reads the next double-precision floating point number from the input.</li>
+                <li><code>nextBoolean()</code>: Reads the next boolean value from the input (true or false).</li>
+            </ul>
+            <p><strong>Note:</strong> Always remember to close the <code>Scanner</code> object with <code>scanner.close()</code> to free up system resources.</p>
+        </section>
+
+        <section id="output">
+            <h2>Printing Output in Java</h2>
+            <p>To display output in Java, the <code>System.out.print</code>, <code>System.out.println</code>, and <code>System.out.printf</code> methods are commonly used.</p>
+            <h3>Example: Printing Output</h3>
+            <pre>
+<code>public class OutputExample {
+    public static void main(String[] args) {
+        System.out.print("This is printed on the same line. ");
+        System.out.println("This is printed on a new line.");
+        
+        String name = "John";
+        int age = 25;
+        System.out.printf("Name: %s, Age: %d\n", name, age);
+    }
+}</code>
+            </pre>
+            <p><strong>Explanation:</strong>
+                <ul>
+                    <li><code>System.out.print</code>: Prints output on the same line.</li>
+                    <li><code>System.out.println</code>: Prints output and moves to the next line.</li>
+                    <li><code>System.out.printf</code>: Formats the output using placeholders (e.g., <code>%s</code> for strings, <code>%d</code> for integers).</li>
+                </ul>
+            </p>
+        </section>
+
+        <section id="practice">
+            <h2>Practice Problems</h2>
+            <ul>
+                <li>Write a program to take two numbers as input and print their sum.</li>
+                <li>Write a program to take a user's first name and last name as input, then print their full name.</li>
+                <li>Write a program to format and display a student's details: name, age, and grade.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Happy Coding!</p>
+    </footer>
+</body>
+</html>

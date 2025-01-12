@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Loops Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background: #4CAF50;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #4CAF50;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-size: 0.95em;
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-left: 4px solid #4CAF50;
+            overflow-x: auto;
+        }
+        .example {
+            background: #eef7ee;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-left: 4px solid #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Java Loops Explained</h1>
+    </header>
+    <main>
+        <section id="for-loop">
+            <h2>For Loop</h2>
+            <p>The <strong>for loop</strong> is used when the number of iterations is known. It allows you to iterate over a range of values by initializing, checking a condition, and incrementing or decrementing a counter.</p>
+            <p><strong>Syntax:</strong></p>
+            <pre><code>for (initialization; condition; update) {
+    // Code to be executed
+}</code></pre>
+            <p><strong>Example:</strong></p>
+            <pre><code>for (int i = 0; i < 5; i++) {
+    System.out.println("Iteration: " + i);
+}</code></pre>
+            <div class="example">
+                <p><strong>Use Case:</strong> When you know the exact number of iterations needed, such as looping through an array or performing a task a fixed number of times.</p>
+            </div>
+        </section>
+
+        <section id="while-loop">
+            <h2>While Loop</h2>
+            <p>The <strong>while loop</strong> is used when the number of iterations is not known in advance. It executes the loop body as long as the condition is true.</p>
+            <p><strong>Syntax:</strong></p>
+            <pre><code>while (condition) {
+    // Code to be executed
+}</code></pre>
+            <p><strong>Example:</strong></p>
+            <pre><code>int count = 0;
+while (count < 5) {
+    System.out.println("Count: " + count);
+    count++;
+}</code></pre>
+            <div class="example">
+                <p><strong>Use Case:</strong> When the loop should continue until a certain condition is met, such as waiting for user input or processing until a certain state is achieved.</p>
+            </div>
+        </section>
+
+        <section id="do-while-loop">
+            <h2>Do-While Loop</h2>
+            <p>The <strong>do-while loop</strong> is similar to the while loop, but it guarantees that the loop body will be executed at least once, regardless of the condition.</p>
+            <p><strong>Syntax:</strong></p>
+            <pre><code>do {
+    // Code to be executed
+} while (condition);</code></pre>
+            <p><strong>Example:</strong></p>
+            <pre><code>int count = 0;
+do {
+    System.out.println("Count: " + count);
+    count++;
+} while (count < 5);</code></pre>
+            <div class="example">
+                <p><strong>Use Case:</strong> When the loop body must be executed at least once, such as displaying a menu before checking user input.</p>
+            </div>
+        </section>
+
+        <section id="for-each-loop">
+            <h2>For-Each Loop</h2>
+            <p>The <strong>for-each loop</strong> is used to iterate through collections or arrays. It simplifies the code and makes it more readable when dealing with elements in a collection.</p>
+            <p><strong>Syntax:</strong></p>
+            <pre><code>for (type element : collection) {
+    // Code to be executed
+}</code></pre>
+            <p><strong>Example:</strong></p>
+            <pre><code>int[] numbers = {1, 2, 3, 4, 5};
+for (int num : numbers) {
+    System.out.println("Number: " + num);
+}</code></pre>
+            <div class="example">
+                <p><strong>Use Case:</strong> When you need to iterate over all elements of an array or collection without needing to manage an index explicitly.</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

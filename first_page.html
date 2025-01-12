@@ -12,109 +12,75 @@
         body {
             margin: 0;
             font-family: 'Roboto', sans-serif;
-            background: linear-gradient(45deg, #6a11cb, #2575fc, #00d2ff); /* Vivid multi-color gradient */
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%); /* Bold, vibrant gradient */
             color: white;
             display: flex;
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
             justify-content: space-between;
-            background-size: 300% 300%;
-            animation: gradientShift 6s ease infinite;
             transition: all 0.3s ease;
-        }
-
-        @keyframes gradientShift {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
         }
 
         /* Header Section */
         header {
             width: 100%;
-            background-color: rgba(0, 122, 204, 0.85); /* Transparent header */
+            background-color: rgba(0, 122, 204, 0.85); /* Transparent effect */
             color: white;
-            padding: 60px 20px;
+            padding: 50px 20px;
             text-align: center;
-            box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.2);
-            border-bottom: 6px solid #005c99;
+            box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
+            border-bottom: 5px solid #005c99;
             transition: all 0.3s ease;
         }
 
         header h1 {
             margin: 0;
-            font-size: 3.8rem;
+            font-size: 3.5rem;
             letter-spacing: 2px;
             text-transform: uppercase;
             font-weight: 700;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
         }
 
         header p {
-            margin: 20px 0 0;
-            font-size: 1.6rem;
+            margin: 15px 0 0;
+            font-size: 1.8rem;
             opacity: 0.9;
             font-weight: 500;
-            letter-spacing: 1px;
         }
 
         /* Navigation Section */
         nav {
-            margin: 60px 20px;
+            margin: 50px 20px;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 35px;
+            gap: 30px;
         }
 
         nav a {
             text-decoration: none;
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             font-weight: 600;
             color: white;
             background-color: #007acc;
             padding: 18px 30px;
             border-radius: 12px;
-            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
             transition: all 0.3s ease;
             text-align: center;
-            flex: 1 1 calc(270px - 40px); /* Widen links for better presentation */
-            max-width: 270px;
-            font-size: 1.5rem;
+            flex: 1 1 calc(260px - 40px); /* Wider, responsive links */
+            max-width: 260px;
+            font-size: 1.4rem;
             text-transform: uppercase;
             border: 2px solid transparent;
-            background: #007acc;
-            position: relative;
-            overflow: hidden;
-        }
-
-        nav a::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 50%;
-            width: 200%;
-            height: 100%;
-            background: linear-gradient(45deg, #fff, rgba(255, 255, 255, 0.2));
-            transform: translateX(-50%) scaleX(0);
-            transition: transform 0.3s ease;
-        }
-
-        nav a:hover::before {
-            transform: translateX(-50%) scaleX(1);
         }
 
         nav a:hover {
             background-color: #005c99;
-            transform: translateY(-7px);
-            box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.4);
+            transform: translateY(-6px);
+            box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
             border: 2px solid #fff;
         }
 
@@ -125,20 +91,19 @@
 
         /* Footer Section */
         footer {
-            padding: 25px 10px;
+            padding: 20px 10px;
             width: 100%;
             text-align: center;
-            background-color: rgba(0, 68, 153, 0.85);
+            background-color: rgba(0, 68, 153, 0.85); /* Transparent footer */
             color: #f4f4f9;
-            border-top: 6px solid #005c99;
-            box-shadow: 0px -2px 12px rgba(0, 0, 0, 0.15);
-            transition: all 0.3s ease;
+            border-top: 5px solid #005c99;
+            box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.15);
         }
 
         footer p {
             margin: 0;
-            font-size: 1.2rem;
-            opacity: 0.9;
+            font-size: 1.1rem;
+            opacity: 0.85;
             letter-spacing: 1px;
         }
 
@@ -159,8 +124,8 @@
             }
 
             nav a {
-                font-size: 1.2rem;
-                padding: 16px 25px;
+                font-size: 1.1rem;
+                padding: 15px 20px;
             }
 
             footer p {
@@ -172,15 +137,15 @@
         @keyframes hoverPulse {
             0% {
                 transform: scale(1);
-                box-shadow: 0 0 10px rgba(0, 122, 204, 0.4);
+                box-shadow: 0 0 15px rgba(0, 122, 204, 0.5);
             }
             50% {
-                transform: scale(1.05);
-                box-shadow: 0 0 25px rgba(0, 122, 204, 0.6);
+                transform: scale(1.1);
+                box-shadow: 0 0 25px rgba(0, 122, 204, 0.7);
             }
             100% {
                 transform: scale(1);
-                box-shadow: 0 0 10px rgba(0, 122, 204, 0.4);
+                box-shadow: 0 0 15px rgba(0, 122, 204, 0.5);
             }
         }
 
@@ -202,6 +167,10 @@
 <nav aria-label="Java Programming Topics Navigation">
     <a href="Introduction_to_Java.html">Introduction to Java</a>
     <a href="data_types_and_variables.html">Data types and Variables</a>
+    <a href="Conditional_statement.html">Conditional Statement</a>
+    <a href="Operators.html">Operators in Java</a>
+    <a href="Input_output.html">Input and Output</a>
+    <a href="Loops.html">Loops In Java</a>
     <!-- More links can be added here -->
 </nav> 
 
