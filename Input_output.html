@@ -6,126 +6,146 @@
     <title>Input and Output in Java</title>
     <style>
         /* General styling */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f0f0f5;
-    color: #333;
-    line-height: 1.6;
-}
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f0f5;
+            color: #333;
+            line-height: 1.6;
+        }
 
-/* Header */
-header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-}
+        /* Header */
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
 
-/* Main content */
-main {
-    max-width: 1200px;
-    margin: 20px auto;
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-}
+        /* Main content */
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
 
-/* Headings */
-h1, h2 {
-    color: #333;
-    margin-bottom: 20px;
-}
+        /* Headings */
+        h1, h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
 
-h1 {
-    font-size: 2.5rem;
-}
+        h1 {
+            font-size: 2.5rem;
+        }
 
-h2 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-}
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
 
-/* Paragraphs */
-p {
-    font-size: 1rem;
-    margin-bottom: 20px;
-    color: #555;
-}
+        /* Paragraphs */
+        p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+            color: #555;
+        }
 
-/* Links */
-a {
-    color: #4CAF50;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
+        /* Links */
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
 
-a:hover {
-    color: #45a049;
-    text-decoration: underline;
-}
+        a:hover {
+            color: #45a049;
+            text-decoration: underline;
+        }
 
-/* Buttons */
-button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 12px 24px;
-    font-size: 1rem;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    margin-top: 10px;
-}
+        /* Buttons */
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin-top: 10px;
+        }
 
-button:hover {
-    background-color: #45a049;
-    transform: translateY(-2px);
-}
+        button:hover {
+            background-color: #45a049;
+            transform: translateY(-2px);
+        }
 
-/* Footer */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 15px 0;
-    position: relative;
-    width: 100%;
-    margin-top: 30px;
-    font-size: 0.9rem;
-}
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            position: relative;
+            width: 100%;
+            margin-top: 30px;
+            font-size: 0.9rem;
+        }
 
-/* Responsive design */
-@media screen and (max-width: 768px) {
-    body {
-        padding: 0 10px;
-    }
+        /* Video Section */
+        .video-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            padding-top: 56.25%; /* Aspect ratio 16:9 */
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
 
-    main {
-        margin: 10px;
-        padding: 20px;
-    }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
 
-    header {
-        padding: 15px 0;
-    }
+        /* Responsive design */
+        @media screen and (max-width: 768px) {
+            body {
+                padding: 0 10px;
+            }
 
-    h1 {
-        font-size: 2rem;
-    }
+            main {
+                margin: 10px;
+                padding: 20px;
+            }
 
-    h2 {
-        font-size: 1.5rem;
-    }
-}
+            header {
+                padding: 15px 0;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -204,6 +224,14 @@ public class InputExample {
                 <li>Write a program to take a user's first name and last name as input, then print their full name.</li>
                 <li>Write a program to format and display a student's details: name, age, and grade.</li>
             </ul>
+        </section>
+
+        <section id="video">
+            <h2>Watch the Video</h2>
+            <p>For a detailed explanation of input and output in Java, watch the video below:</p>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/5lkLrOe5cDg?si=LgKpq0M0Kl2CcOK-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
         </section>
     </main>
 

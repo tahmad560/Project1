@@ -4,80 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Operators in Java</title>
-   <style>
-    /* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: #0073e6;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 20px;
+            background: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            color: #0073e6;
+        }
+
+        ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-left: 3px solid #0073e6;
+            overflow-x: auto;
+        }
+
+        code {
+            font-family: monospace;
+            color: #d14;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #333;
+            color: #fff;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+
+        .video-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 760px; /* Adjust the maximum width */
+    padding-top: 31.25%; /* Aspect ratio 16:9 but scaled down */
+    margin: 20px auto; /* Center the video */
 }
 
-header {
-    background: #0073e6;
-    color: #fff;
-    padding: 10px 20px;
-    text-align: center;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2.5em;
-}
-
-main {
-    padding: 20px;
-}
-
-section {
-    margin-bottom: 20px;
-    background: #fff;
-    padding: 15px;
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
-section h2 {
-    color: #0073e6;
-}
-
-ul {
-    margin: 10px 0;
-    padding-left: 20px;
-}
-
-li {
-    margin-bottom: 10px;
-}
-
-pre {
-    background: #f4f4f4;
-    padding: 10px;
-    border-left: 3px solid #0073e6;
-    overflow-x: auto;
-}
-
-code {
-    font-family: monospace;
-    color: #d14;
-}
-
-footer {
-    text-align: center;
-    padding: 10px 0;
-    background: #333;
-    color: #fff;
-    margin-top: 20px;
-}
-
-footer p {
-    margin: 0;
-    font-size: 0.9em;
-}
-
-   </style>
+    </style>
+</head>
 <body>
     <header>
         <h1>Operators in Java</h1>
@@ -103,6 +123,7 @@ footer p {
 
         <section id="examples">
             <h2>Examples</h2>
+            
             <h3>Arithmetic Operators</h3>
             <pre><code>int a = 10, b = 5;
 System.out.println("Addition: " + (a + b)); // Output: 15
@@ -117,6 +138,26 @@ System.out.println(x <= y); // Output: true</code></pre>
             <pre><code>boolean p = true, q = false;
 System.out.println(p && q); // Output: false
 System.out.println(p || q); // Output: true</code></pre>
+
+            <h3>Bitwise Operators</h3>
+            <pre><code>int m = 5, n = 3;
+System.out.println(m & n); // Output: 1 (Bitwise AND)
+System.out.println(m | n); // Output: 7 (Bitwise OR)</code></pre>
+
+            <h3>Assignment Operators</h3>
+            <pre><code>int num = 10;
+num += 5; // Equivalent to num = num + 5
+System.out.println(num); // Output: 15</code></pre>
+
+            <h3>Unary Operators</h3>
+            <pre><code>int z = 10;
+System.out.println(++z); // Output: 11 (Pre-increment)
+System.out.println(z--); // Output: 11 (Post-decrement)</code></pre>
+
+            <h3>Ternary Operator</h3>
+            <pre><code>int a = 10, b = 20;
+int max = (a > b) ? a : b;
+System.out.println("Maximum: " + max); // Output: 20</code></pre>
         </section>
 
         <section id="practice">
@@ -128,6 +169,18 @@ System.out.println(p || q); // Output: true</code></pre>
                 <li>Experiment with bitwise operators to manipulate binary values.</li>
             </ol>
         </section>
+
+        <div class="video-container">
+            <h2>Watch the Video</h2>
+            <p>To dive deeper into Java operators, watch this informative video:</p>
+            <iframe 
+                src="https://www.youtube.com/embed/37Pvj3SQ2FQ?si=XmOlV9MKNQRcVwOq" 
+                title="YouTube video player" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+            </iframe>
+        </div>
     </main>
 
     <footer>

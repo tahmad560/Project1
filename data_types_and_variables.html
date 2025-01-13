@@ -163,7 +163,7 @@
         <table>
             <thead>
                 <tr>
-                    <th>Type</th>
+                    <th>Data Type</th>
                     <th>Size</th>
                     <th>Description</th>
                     <th>Example</th>
@@ -173,26 +173,50 @@
                 <tr>
                     <td>int</td>
                     <td>4 bytes</td>
-                    <td>Stores integers</td>
+                    <td>Stores integer values</td>
                     <td>42</td>
+                </tr>
+                <tr>
+                    <td>float</td>
+                    <td>4 bytes</td>
+                    <td>Stores decimal values</td>
+                    <td>3.14f</td>
                 </tr>
                 <tr>
                     <td>double</td>
                     <td>8 bytes</td>
-                    <td>Precise decimal values</td>
-                    <td>3.14</td>
+                    <td>Stores precise decimal values</td>
+                    <td>3.14159</td>
                 </tr>
                 <tr>
                     <td>char</td>
                     <td>2 bytes</td>
-                    <td>Single character</td>
+                    <td>Stores a single character</td>
                     <td>'A'</td>
                 </tr>
                 <tr>
                     <td>boolean</td>
                     <td>1 bit</td>
-                    <td>True/false</td>
+                    <td>Stores true or false</td>
                     <td>true</td>
+                </tr>
+                <tr>
+                    <td>byte</td>
+                    <td>1 byte</td>
+                    <td>Stores small integer values</td>
+                    <td>127</td>
+                </tr>
+                <tr>
+                    <td>short</td>
+                    <td>2 bytes</td>
+                    <td>Stores medium integer values</td>
+                    <td>32000</td>
+                </tr>
+                <tr>
+                    <td>long</td>
+                    <td>8 bytes</td>
+                    <td>Stores large integer values</td>
+                    <td>123456789L</td>
                 </tr>
             </tbody>
         </table>
@@ -202,19 +226,16 @@
         <h2>Non-Primitive Data Types</h2>
         <p>Non-primitive data types are more complex and include:</p>
         <ul>
-            <li><strong>String:</strong> Represents a sequence of characters. Example: "Hello, World!"</li>
-            <li><strong>Arrays:</strong> Stores multiple values of the same type. Example: <code>int[] numbers = {1, 2, 3};</code></li>
+            <li><strong>String</strong>: Represents a sequence of characters. Example: <code>"Hello, World!"</code></li>
+            <li><strong>Arrays</strong>: Stores multiple values of the same type. Example: <code>int[] numbers = {1, 2, 3};</code></li>
         </ul>
     </section>
 
     <section>
         <h2>Practice Problems</h2>
         <ol>
-            <li><strong>Swap Two Numbers:</strong>
-                <p>Write a program that swaps the values of two variables without using a third variable.</p>
-            </li>
-            <li><strong>User Input:</strong>
-                <p>Create a program that:</p>
+            <li><strong>Swap Two Numbers</strong><br>Write a program that swaps the values of two variables without using a third variable.</li>
+            <li><strong>User Input</strong><br>Create a program that:
                 <ul>
                     <li>Takes user input for their name, age, and salary.</li>
                     <li>Displays the details in a formatted message.</li>
