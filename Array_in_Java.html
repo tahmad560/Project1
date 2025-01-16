@@ -40,6 +40,16 @@
             list-style: disc inside;
             margin-bottom: 1rem;
         }
+        .video-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .video-container iframe {
+            max-width: 100%;
+            height: auto;
+            border: none;
+            border-radius: 8px;
+        }
     </style>
 </head>
 <body>
@@ -90,6 +100,15 @@
 for (int i = array.length - 1; i >= 0; i--) {
     System.out.print(array[i] + " ");
 }</code></pre>
+<div class="video-container">
+    <h2>Watch the Video</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/KpFW4yGv14Y?si=cGyDEKQ8H9dQ3I2L" 
+            title="YouTube video player" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen>
+    </iframe>
+</div> 
 
         <h2>Conclusion</h2>
         <p>Arrays are a cornerstone of Java programming, providing a way to store and manipulate collections of data. Understanding arrays will help you work with data more effectively and lay the groundwork for more advanced topics like collections and algorithms.</p>
