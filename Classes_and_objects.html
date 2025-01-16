@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Class and Object in Java</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            margin-top: 10px;
+        }
+
+        /* Main Content */
+        .content {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .content h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .content pre {
+            background-color: #272822;
+            color: #f8f8f2;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: "Courier New", Courier, monospace;
+            margin-bottom: 20px;
+        }
+
+        .content ul {
+            list-style-type: none;
+            margin: 20px 0;
+        }
+
+        .content ul li {
+            margin: 10px 0;
+            font-size: 1.1rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            margin-top: 30px;
+        }
+
+        footer p {
+            font-size: 1rem;
+        }
+        .video-container {
+    max-width: 100%;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.video-container iframe {
+    width: 100%;
+    max-width: 640px;
+    height: 360px;
+    border: none;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Class and Object in Java</h1>
+        <p>Learn about classes, objects, and references in Java programming.</p>
+    </header>
+
+    <section class="content">
+        <h2>What is a Class?</h2>
+        <p>A class in Java is a blueprint for creating objects. It defines a datatype by bundling data and methods that work on the data into one single unit.</p>
+        <p>In other words, a class defines properties (fields) and behaviors (methods) that the objects created from it will have.</p>
+
+        <h2>What is an Object?</h2>
+        <p>An object is an instance of a class. When a class is defined, no memory is allocated until an object of that class is created.</p>
+        <p>Each object has its own copy of instance variables and can use the methods defined in the class.</p>
+
+        <h2>What is a Reference?</h2>
+        <p>A reference in Java is a variable that holds the memory address of an object. It does not store the actual object, but rather points to it in memory. The reference variable allows you to interact with the object and access its methods and attributes.</p>
+        
+        <h3>Code Example: Class, Object, and Reference</h3>
+        <pre><code>
+public class Car {
+    // Fields (Attributes)
+    String make;
+    String model;
+    int year;
+
+    // Constructor to initialize the object
+    public Car(String make, String model, int year) {
+        this.make = make;
+        this.model = model;
+        this.year = year;
+    }
+
+    // Method to display the details of the car
+    public void displayInfo() {
+        System.out.println("Car Make: " + make);
+        System.out.println("Car Model: " + model);
+        System.out.println("Car Year: " + year);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Reference variable of type Car
+        Car myCar;
+
+        // Creating a new Car object and assigning it to the reference variable
+        myCar = new Car("Honda", "Civic", 2022);
+
+        // Using the reference variable to access the object's method
+        myCar.displayInfo();  // Output: Car Make: Honda, Car Model: Civic, Car Year: 2022
+    }
+}
+        </code></pre>
+
+        <h3>Explanation of the Code</h3>
+        <ul>
+            <li><strong>Reference Variable:</strong> The variable <code>myCar</code> is a reference variable of type <code>Car</code>. It holds the memory address of the Car object.</li>
+            <li><strong>Creating an Object:</strong> We use the <code>new</code> keyword to create a new object of the <code>Car</code> class and assign it to the reference variable <code>myCar</code>.</li>
+            <li><strong>Accessing Object Methods:</strong> The reference variable <code>myCar</code> is used to call the <code>displayInfo()</code> method, which displays the car's make, model, and year on the console.</li>
+        </ul>
+
+        <h3>Key Points About References:</h3>
+        <ul>
+            <li><strong>Reference Variables:</strong> A reference variable points to an object stored in memory. It does not hold the actual object but its memory address.</li>
+            <li><strong>Null Reference:</strong> A reference variable that does not point to any object is said to be <code>null</code>. Accessing methods or fields from a <code>null</code> reference will result in a <code>NullPointerException</code>.</li>
+            <li><strong>Objects:</strong> Objects are instances of classes created with the <code>new</code> keyword and stored in memory, while references are used to interact with these objects.</li>
+        </ul>
+
+        <h3>Additional Notes on References:</h3>
+        <ul>
+            <li><strong>Reference Type:</strong> A reference type is any type that refers to an object (such as classes, interfaces, arrays, etc.), unlike primitive types (int, float, etc.), which store the actual value.</li>
+            <li><strong>Passing by Reference:</strong> In Java, when you pass an object to a method, you're passing the reference to that object. This means that changes made to the object inside the method will affect the original object.</li>
+        </ul>
+        <div class="video-container">
+            <iframe src="https://drive.google.com/file/d/1Q4UWOmeL0Y2jy6N07gN3KagACN59nlic/preview" width="640" height="360" allow="autoplay"></iframe>
+        </div>
+        <footer>
+            <p>&copy; 2024 Learn Java - All Rights Reserved</p>
+        </footer>
+    </section>
+</body>
+</html>

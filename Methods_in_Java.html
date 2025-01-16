@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding Methods in Java</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #007bb5;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1, h2, h3 {
+            color: #007bb5;
+        }
+        code {
+            background: #e8e8e8;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+        ul {
+            list-style: disc inside;
+            margin-bottom: 1rem;
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-left: 4px solid #007bb5;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Understanding Methods in Java</h1>
+    </header>
+    <div class="container">
+        <h2>What Are Methods?</h2>
+        <p>A <strong>method</strong> in Java is a block of code designed to perform a specific task. Methods help to organize and reuse code, making it more modular and easier to debug.</p>
+
+        <h2>Why Use Methods?</h2>
+        <ul>
+            <li>To avoid repeating code (DRY principle).</li>
+            <li>To make code more readable and manageable.</li>
+            <li>To facilitate code reuse and testing.</li>
+        </ul>
+
+        <h2>Method Syntax</h2>
+        <pre><code>returnType methodName(parameters) {
+    // Method body
+    // Perform actions
+    return value; // Optional
+}</code></pre>
+        <p>Example:</p>
+        <pre><code>public int addNumbers(int a, int b) {
+    return a + b;
+}</code></pre>
+
+        <h2>Types of Methods</h2>
+        <ul>
+            <li><strong>Predefined Methods:</strong> Built-in methods provided by Java (e.g., <code>System.out.println()</code>).</li>
+            <li><strong>User-defined Methods:</strong> Custom methods created by the programmer to solve specific tasks.</li>
+        </ul>
+
+        <h2>Method Parameters</h2>
+        <p>Methods can take inputs (parameters) to perform tasks. Parameters are defined within parentheses:</p>
+        <pre><code>public void greet(String name) {
+    System.out.println("Hello, " + name + "!");
+}</code></pre>
+        <p>Calling the method:</p>
+        <pre><code>greet("Alice"); // Output: Hello, Alice!</code></pre>
+
+        <h2>Method Overloading</h2>
+        <p>Method overloading allows multiple methods with the same name but different parameters:</p>
+        <pre><code>public int multiply(int a, int b) {
+    return a * b;
+}
+
+public double multiply(double a, double b) {
+    return a * b;
+}</code></pre>
+
+        <h2>Example: Calculate Factorial</h2>
+        <pre><code>public int factorial(int n) {
+    if (n == 0 || n == 1) {
+        return 1;
+    }
+    return n * factorial(n - 1);
+}</code></pre>
+
+        <h2>Practice Problems</h2>
+        <ol>
+            <li>Create a method to check if a number is even or odd.</li>
+            <li>Write a method to find the largest number in an array.</li>
+            <li>Develop a method that reverses a string.</li>
+            <li>Implement a method to calculate the power of a number (e.g., <code>pow(base, exponent)</code>).</li>
+            <li>Create a method to determine if a string is a palindrome.</li>
+        </ol>
+
+        <h2>Conclusion</h2>
+        <p>Methods are essential building blocks of Java programming. They enhance code readability, reusability, and modularity. Mastering methods will help you structure your programs more efficiently and tackle complex problems with ease.</p>
+    </div>
+</body>
+</html>

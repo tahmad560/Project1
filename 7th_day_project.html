@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 7 Projects</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: #0073e6;
+            color: #fff;
+            padding: 20px 10px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #0073e6;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        .project {
+            border-left: 4px solid #0073e6;
+            padding-left: 10px;
+            margin-bottom: 15px;
+            background: #f9f9f9;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .hint, .sample-output {
+            background: #eef6ff;
+            border-left: 4px solid #0073e6;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #333;
+            color: #fff;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Day 7: Java Project Challenges</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Welcome!</h2>
+            <p>Here are the 7 Java projects you'll be tackling today. Each project includes a brief description, hints to help you get started, and a sample output for reference. Good luck and have fun coding!</p>
+        </section>
+
+        <section>
+            <h2>Projects</h2>
+
+            <div class="project">
+                <h3>1. Simple Calculator</h3>
+                <p>Create a program that performs basic arithmetic operations like addition, subtraction, multiplication, and division.</p>
+                <div class="hint">
+                    <strong>Hint:</strong> Use a <code>switch</code> statement to handle different operations based on user input.
+                </div>
+                <div class="sample-output">
+                    <strong>Sample Output:</strong>
+                    <pre>
+Enter first number: 10
+Enter second number: 5
+Choose operation (+, -, *, /): +
+Result: 15
+                    </pre>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>2. Number Guessing Game</h3>
+                <p>Write a program where the user guesses a randomly generated number within a range.</p>
+                <div class="hint">
+                    <strong>Hint:</strong> Use <code>Random class</code> to generate a random number and <code>while</code> loop for attempts.
+                </div>
+                <div class="sample-output">
+                    <strong>Sample Output:</strong>
+                    <pre>
+Guess a number between 1 and 10: 5
+Too low! Try again.
+Guess a number between 1 and 10: 7
+Congratulations! You guessed the number.
+                    </pre>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>3. Student Grading System</h3>
+                <p>Design a program that calculates grades based on marks input by the user.</p>
+                <div class="hint">
+                    <strong>Hint:</strong> Use <code>if-else</code> or <code>switch</code> statements to assign grades.
+                </div>
+                <div class="sample-output">
+                    <strong>Sample Output:</strong>
+                    <pre>
+Enter marks: 85
+Grade: A
+                    </pre>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>4. Multiplication Table Generator</h3>
+                <p>Create a program that generates and displays the multiplication table for a given number.</p>
+                <div class="hint">
+                    <strong>Hint:</strong> Use a <code>for</code> loop to iterate through and calculate each result.
+                </div>
+                <div class="sample-output">
+                    <strong>Sample Output:</strong>
+                    <pre>
+Enter a number: 5
+5 x 1 = 5
+5 x 2 = 10
+...
+5 x 10 = 50
+                    </pre>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>5. ATM Simulator</h3>
+                <p>Simulate basic ATM functions such as checking balance, depositing, and withdrawing money.</p>
+                <div class="hint">
+                    <strong>Hint:</strong> Use a <code>do-while</code> loop to create a menu-driven program.
+                </div>
+                <div class="sample-output">
+                    <strong>Sample Output:</strong>
+                    <pre>
+1. Check Balance
+2. Deposit Money
+3. Withdraw Money
+4. Exit
+Enter your choice: 1
+Your balance is $1000
+                    </pre>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>6. Pattern Printing</h3>
+                <p>Write a program to print patterns such as a pyramid or inverted triangle based on user input.</p>
+                <div class="hint">
+                    <strong>Hint:</strong> Use nested <code>for</code> loops to create the desired pattern.
+                </div>
+                <div class="sample-output">
+                    <strong>Sample Output:</strong>
+                    <pre>
+*
+**
+***
+****
+*****
+                    </pre>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>7. Basic BMI Calculator</h3>
+                <p>Develop a program that calculates Body Mass Index (BMI) based on height and weight inputs.</p>
+                <div class="hint">
+                    <strong>Hint:</strong> Use the formula <code>BMI = weight / (height * height)</code> and take care of units.
+                </div>
+                <div class="sample-output">
+                    <strong>Sample Output:</strong>
+                    <pre>
+Enter your weight (kg): 70
+Enter your height (m): 1.75
+Your BMI is 22.86
+                    </pre>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Java Coding Challenges. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursion Problems</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #6200ea;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        .problem {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        .problem h2 {
+            margin-top: 0;
+            color: #6200ea;
+        }
+        .hint {
+            background: #f9f9f9;
+            border-left: 4px solid #6200ea;
+            padding: 0.5rem 1rem;
+            margin-top: 1rem;
+        }
+        .example {
+            background: #e8f5e9;
+            border-left: 4px solid #388e3c;
+            padding: 0.5rem 1rem;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Recursion Practice Problems</h1>
+    </header>
+    <div class="container">
+        <!-- Problem 1 -->
+        <div class="problem">
+            <h2>1. Factorial Calculation</h2>
+            <p>Write a recursive function to calculate the factorial of a number <code>n</code>.</p>
+            <div class="hint">
+                Hint: The factorial of <code>n</code> is <code>n * factorial(n-1)</code>. Base case: <code>factorial(0) = 1</code>.
+            </div>
+            <div class="example">
+                Example: <br>
+                Input: <code>5</code><br>
+                Output: <code>120</code>
+            </div>
+        </div>
+
+        <!-- Problem 2 -->
+        <div class="problem">
+            <h2>2. Fibonacci Sequence</h2>
+            <p>Create a recursive function to find the <code>n</code>-th Fibonacci number.</p>
+            <div class="hint">
+                Hint: Fibonacci numbers are calculated as <code>fib(n) = fib(n-1) + fib(n-2)</code>. Base cases: <code>fib(0) = 0</code>, <code>fib(1) = 1</code>.
+            </div>
+            <div class="example">
+                Example: <br>
+                Input: <code>6</code><br>
+                Output: <code>8</code>
+            </div>
+        </div>
+
+        <!-- Problem 3 -->
+        <div class="problem">
+            <h2>3. Sum of Digits</h2>
+            <p>Write a recursive function to calculate the sum of the digits of a number.</p>
+            <div class="hint">
+                Hint: Add the last digit to the sum of the digits of the remaining number: <code>sum(n) = n % 10 + sum(n / 10)</code>. Base case: <code>n == 0</code>.
+            </div>
+            <div class="example">
+                Example: <br>
+                Input: <code>123</code><br>
+                Output: <code>6</code>
+            </div>
+        </div>
+        <!-- Problem 4 -->
+        <div class="problem">
+            <h2>4. Reverse a String</h2>
+            <p>Develop a recursive function to reverse a given string.</p>
+            <div class="hint">
+                Hint: Reverse the rest of the string and append the first character: <code>reverse(s) = reverse(s[1:]) + s[0]</code>. Base case: <code>len(s) == 0</code>.
+            </div>
+            <div class="example">
+                Example: <br>
+                Input: <code>"hello"</code><br>
+                Output: <code>"olleh"</code>
+            </div>
+        </div>
+
+        <!-- Problem 5 -->
+        <div class="problem">
+            <h2>5. Power Calculation</h2>
+            <p>Implement a recursive function to calculate <code>a^b</code> (a raised to the power b).</p>
+            <div class="hint">
+                Hint: Multiply <code>a</code> by the result of <code>a^(b-1)</code>. Base case: <code>a^0 = 1</code>.
+            </div>
+            <div class="example">
+                Example: <br>
+                Input: <code>2, 3</code><br>
+                Output: <code>8</code>
+            </div>
+        </div>
+
+        <!-- Problem 6 -->
+        <div class="problem">
+            <h2>6. Palindrome Check</h2>
+            <p>Write a recursive function to check whether a given string is a palindrome.</p>
+            <div class="hint">
+                Hint: Check if the first and last characters are the same, then check the substring in between: <code>isPalindrome(s) = s[0] == s[-1] and isPalindrome(s[1:-1])</code>. Base case: <code>len(s) <= 1</code>.
+            </div>
+            <div class="example">
+                Example: <br>
+                Input: <code>"radar"</code><br>
+                Output: <code>true</code>
+            </div>
+        </div>
+
+        <!-- Problem 7 -->
+        <div class="problem">
+            <h2>7. Tower of Hanoi</h2>
+            <p>Solve the Tower of Hanoi problem for <code>n</code> disks.</p>
+            <div class="hint">
+                Hint: Move <code>n-1</code> disks to the auxiliary rod, move the last disk to the target rod, and then move the <code>n-1</code> disks from the auxiliary rod to the target rod.
+            </div>
+            <div class="example">
+                Example: <br>
+                Input: <code>3 disks</code><br>
+                Output: A sequence of moves transferring all disks from source to target.
+            </div>
+        </div>
+
+        <!-- Problem 8 -->
+        <div class="problem">
+            <h2>8. Count Occurrences</h2>
+            <p>Create a recursive function to count the occurrences of a specific element in an array.</p>
+            <div class="hint">
+                Hint: Check if the first element matches, then count occurrences in the rest of the array. Base case: <code>len(array) == 0</code>.
+            </div>
+            <div class="example">
+                Example: <br>
+                Input: <code>[1, 2, 3, 2, 2], 2</code><br>
+                Output: <code>3</code>
+            </div>
+        </div>
+
+        <!-- Problem 9 -->
+        <div class="problem">
+            <h2>9. Binary Search</h2>
+            <p>Implement the binary search algorithm using recursion.</p>
+            <div class="hint">
+                Hint: Compare the middle element with the target and search in the appropriate half. Base case: <code>start > end</code>.
+            </div>
+            <div class="example">
+                Example: <br>
+                Input: <code>[1, 2, 3, 4, 5], 3</code><br>
+                Output: <code>2 (index)</code>
+            </div>
+        </div>
+
+        <!-- Problem 10 -->
+        <div class="problem">
+            <h2>10. Permutations of a String</h2>
+            <p>Write a recursive function to generate all permutations of a given string.</p>
+            <div class="hint">
+                Hint: Swap each character with the first character and recursively find permutations of the rest. Base case: <code>len(s) == 1</code>.
+            </div>
+            <div class="example">
+                Example: <br>
+                Input: <code>"abc"</code><br>
+                Output: <code>["abc", "acb", "bac", "bca", "cab", "cba"]</code>
+            </div>
+        </div>
+        <!-- Add more problems here -->
+
+    </div>
+</body>
+</html>

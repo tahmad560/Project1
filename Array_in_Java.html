@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding Arrays in Java</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #6200ea;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1, h2, h3 {
+            color: #6200ea;
+        }
+        code {
+            background: #e8e8e8;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+        ul {
+            list-style: disc inside;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Understanding Arrays in Java</h1>
+    </header>
+    <div class="container">
+        <h2>What Are Arrays?</h2>
+        <p>An <strong>array</strong> is a data structure that stores multiple values of the same type in a single variable. Arrays are helpful when dealing with a large number of similar values and want to manage them efficiently.</p>
+        <p><strong>Why Use Arrays?</strong></p>
+        <ul>
+            <li>To store multiple values in a single variable.</li>
+            <li>Efficiently manage and manipulate data.</li>
+            <li>Easy to iterate using loops.</li>
+        </ul>
+
+        <h2>Types of Arrays in Java</h2>
+        <ul>
+            <li><strong>Single-Dimensional Array:</strong> A linear array where elements are stored in a single row.
+                <pre><code>int[] numbers = {1, 2, 3, 4, 5};</code></pre>
+            </li>
+            <li><strong>Multi-Dimensional Array:</strong> Arrays with more than one dimension, often used for tables or matrices.
+                <pre><code>int[][] matrix = {
+    {1, 2},
+    {3, 4},
+    {5, 6}
+};</code></pre>
+            </li>
+        </ul>
+
+        <h2>Key Operations on Arrays</h2>
+        <ul>
+            <li>Declaring and initializing:
+                <pre><code>int[] array = new int[5];</code></pre>
+            </li>
+            <li>Accessing elements:
+                <pre><code>System.out.println(array[0]); // Access first element</code></pre>
+            </li>
+            <li>Iterating using loops:
+                <pre><code>for (int i = 0; i < array.length; i++) {
+    System.out.println(array[i]);
+}</code></pre>
+            </li>
+        </ul>
+
+        <h2>Example: Reverse an Array</h2>
+        <pre><code>int[] array = {1, 2, 3, 4, 5};
+for (int i = array.length - 1; i >= 0; i--) {
+    System.out.print(array[i] + " ");
+}</code></pre>
+
+        <h2>Conclusion</h2>
+        <p>Arrays are a cornerstone of Java programming, providing a way to store and manipulate collections of data. Understanding arrays will help you work with data more effectively and lay the groundwork for more advanced topics like collections and algorithms.</p>
+    </div>
+</body>
+</html>
