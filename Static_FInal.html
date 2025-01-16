@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static and Final in Java</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        h1 {
+            color: #0056b3;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .code {
+            background: #f4f4f4;
+            border-left: 4px solid #0056b3;
+            padding: 15px;
+            margin: 10px 0;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+            white-space: pre-wrap;
+        }
+        .note {
+            background: #e7f3fe;
+            border-left: 4px solid #2196f3;
+            padding: 10px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Static and Final in Java</h1>
+        <p><strong>Static:</strong> The <code>static</code> keyword in Java is used for memory management and allows fields, methods, or blocks to belong to the class rather than any specific object.</p>
+        <ul>
+            <li><strong>Use case:</strong> Shared variables or utility methods, such as <code>Math.sqrt()</code>.</li>
+            <li><strong>Example:</strong></li>
+        </ul>
+        <div class="code">
+            public class StaticExample {
+                static int counter = 0; // Shared across all instances
+
+                public StaticExample() {
+                    counter++;
+                }
+
+                public static void showCounter() {
+                    System.out.println("Counter: " + counter);
+                }
+
+                public static void main(String[] args) {
+                    StaticExample obj1 = new StaticExample();
+                    StaticExample obj2 = new StaticExample();
+
+                    StaticExample.showCounter(); // Accessing static method
+                }
+            }
+        </div>
+
+        <p><strong>Final:</strong> The <code>final</code> keyword in Java is used to declare constants, prevent method overriding, or inheritance of a class.</p>
+        <ul>
+            <li><strong>Use case:</strong> Declaring constants, ensuring methods are not overridden, or restricting class inheritance.</li>
+            <li><strong>Example:</strong></li>
+        </ul>
+        <div class="code">
+            public class FinalExample {
+                final int MAX_VALUE = 100; // Constant
+
+                public void displayValue() {
+                    System.out.println("Max Value: " + MAX_VALUE);
+                }
+
+                public static void main(String[] args) {
+                    FinalExample example = new FinalExample();
+                    example.displayValue();
+                }
+            }
+
+            final class ImmutableClass {
+                // This class cannot be extended
+            }
+        </div>
+
+        <div class="note">
+            <strong>Note:</strong> 
+            <ul>
+                <li>Static members belong to the class and are shared among all instances.</li>
+                <li>Final variables cannot be reassigned, final methods cannot be overridden, and final classes cannot be extended.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

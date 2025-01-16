@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polymorphism with instanceof in Java</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Container styling */
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header styling */
+        header {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        header h1 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        /* Section styling */
+        section {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        /* Intro section */
+        .intro p {
+            font-size: 16px;
+            color: #444;
+        }
+
+        .intro ul {
+            list-style-type: square;
+            margin-left: 20px;
+        }
+
+        .intro li {
+            font-size: 16px;
+            color: #444;
+        }
+
+        /* Code section styling */
+        .code-example {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        pre {
+            background-color: #2d2d2d;
+            color: #f8f8f8;
+            padding: 20px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 16px;
+        }
+
+        code {
+            display: block;
+            white-space: pre-wrap;
+        }
+
+        /* Output section styling */
+        .output {
+            background-color: #e0e0e0;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .output p {
+            font-size: 16px;
+            color: #333;
+        }
+
+        strong {
+            color: #d9534f;
+        }
+
+        /* Explanation section styling */
+        .explanation p {
+            font-size: 16px;
+            color: #444;
+        }
+
+        .explanation ol {
+            margin-left: 20px;
+        }
+
+        .explanation li {
+            font-size: 16px;
+            color: #444;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Understanding Polymorphism and instanceof in Java</h1>
+        </header>
+
+        <section class="intro">
+            <h2>What is Polymorphism?</h2>
+            <p>
+                Polymorphism is a core concept in Object-Oriented Programming (OOP) that allows an object to take on many forms. In Java, polymorphism is typically achieved through method overriding and method overloading:
+            </p>
+            <ul>
+                <li><strong>Method Overriding:</strong> When a subclass provides a specific implementation of a method already defined in its superclass.</li>
+                <li><strong>Method Overloading:</strong> When multiple methods with the same name exist, but with different parameter lists.</li>
+                <li><strong>Subclass Polymorphism:</strong> When a subclass object is referred to by a superclass reference variable, allowing the overridden method in the subclass to be called at runtime.</li>
+                <li><strong>instanceof Operator:</strong> Used to check if an object is an instance of a specific class or subclass.</li>
+            </ul>
+        </section>
+
+        <section class="code-example">
+            <h2>Java Code Example: Polymorphism with instanceof</h2>
+            <pre>
+                <code>
+class Animal {
+    // Method in the superclass
+    public void sound() {
+        System.out.println("The animal makes a sound.");
+    }
+}
+
+class Dog extends Animal {
+    // Method overriding in the subclass
+    @Override
+    public void sound() {
+        System.out.println("The dog barks.");
+    }
+
+    // Method overloading in the subclass
+    public void sound(int times) {
+        for (int i = 0; i < times; i++) {
+            System.out.println("Bark!");
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal myAnimal = new Dog();  // Dog object is assigned to Animal reference
+        myAnimal.sound();  // Output: The dog barks. (Subclass method is called)
+
+        // Using instanceof to check the actual type of myAnimal
+        if (myAnimal instanceof Dog) {
+            System.out.println("myAnimal is an instance of Dog.");
+        }
+
+        // Method overloading example
+        Dog myDog = new Dog();
+        myDog.sound(3);  // Output: Bark! Bark! Bark!
+    }
+}
+                </code>
+            </pre>
+        </section>
+
+        <section class="output">
+            <h2>Expected Output:</h2>
+            <p><strong>The dog barks.</strong></p>
+            <p><strong>myAnimal is an instance of Dog.</strong></p>
+            <p><strong>Bark! Bark! Bark!</strong></p>
+        </section>
+
+        <section class="explanation">
+            <h2>Explanation of the Code</h2>
+            <p><strong>Polymorphism:</strong> In this example, we demonstrate polymorphism through method overriding, method overloading, and subclass polymorphism.</p>
+
+            <p><strong>Method Overriding:</strong> The method <code>sound()</code> in the <code>Dog</code> class overrides the same method in the <code>Animal</code> class. When the method is called on an object of type <code>Dog</code>, it prints "The dog barks." This is an example of method overriding where the subclass provides a specific implementation of the inherited method.</p>
+
+            <p><strong>Method Overloading:</strong> The <code>sound()</code> method in the <code>Dog</code> class is overloaded. The method accepts an integer argument, which specifies how many times the dog will bark. If you call <code>myDog.sound(3)</code>, it will print "Bark!" three times. This is an example of method overloading, where the same method name is used with different parameter lists.</p>
+
+            <p><strong>Subclass Polymorphism:</strong> In this case, the variable <code>myAnimal</code> is of type <code>Animal</code>, but it references an object of type <code>Dog</code>. This demonstrates polymorphism, as the correct <code>sound()</code> method (from <code>Dog</code>) is called at runtime.</p>
+
+            <p><strong>instanceof:</strong> The <code>instanceof</code> operator is used to check whether the reference variable <code>myAnimal</code> actually refers to an object of type <code>Dog</code>. The expression <code>myAnimal instanceof Dog</code> returns true because the actual object is of type <code>Dog</code>. This check helps us to safely confirm the type of the object before performing any specific operations.</p>
+
+            <p><strong>Output Breakdown:</strong> When the program runs:
+                <ol>
+                    <li>The <code>sound()</code> method in the <code>Dog</code> class is called via the <code>Animal</code> reference. It prints "The dog barks."</li>
+                    <li>The <code>instanceof</code> check confirms that <code>myAnimal</code> is indeed a <code>Dog</code> object and prints "myAnimal is an instance of Dog."</li>
+                    <li>The overloaded <code>sound(int times)</code> method in the <code>Dog</code> class is called with a parameter of 3, and it prints "Bark!" three times.</li>
+                </ol>
+            </p>
+        </section>
+    </div>
+</body>
+</html>

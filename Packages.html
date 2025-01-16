@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding Nested Packages in Java</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to bottom, #f4f9ff, #cce0ff);
+            color: #333;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            width: 100%;
+            background-color: #004aad;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            margin: 5px 0 0;
+            font-size: 1.2rem;
+        }
+
+        .content {
+            margin-top: 30px;
+            max-width: 800px;
+            text-align: left;
+        }
+
+        .content h2 {
+            color: #004aad;
+        }
+
+        .content p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .code-block {
+            background-color: #f4f4f9;
+            border-left: 4px solid #004aad;
+            padding: 20px;
+            margin: 20px 0;
+            font-family: monospace;
+            font-size: 1rem;
+            overflow-x: auto;
+        }
+
+        ul {
+            margin-left: 20px;
+            font-size: 1.1rem;
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 15px;
+            width: 100%;
+            text-align: center;
+            background-color: #f4f4f9;
+            border-top: 1px solid #ddd;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Java Nested Packages Explained</h1>
+    <p>Learn how to create and use nested packages in Java</p>
+</header>
+
+<div class="content">
+    <h2>What are Nested Packages?</h2>
+    <p>
+        Nested packages in Java are a hierarchical way of organizing code into subpackages. For example:
+        <code>package1.package2</code> represents a package <code>package2</code> inside the parent package <code>package1</code>.
+    </p>
+
+    <h2>Why Use Nested Packages?</h2>
+    <ul>
+        <li><strong>Better Code Organization:</strong> Helps in structuring large-scale projects logically.</li>
+        <li><strong>Namespace Management:</strong> Avoids conflicts by creating unique namespaces.</li>
+        <li><strong>Logical Grouping:</strong> Groups related classes and subpackages together.</li>
+    </ul>
+
+    <h2>Creating Nested Packages</h2>
+    <p>To create a nested package, use dot notation in the <code>package</code> statement. The directory structure must match the hierarchy.</p>
+
+    <h3>Example:</h3>
+    <div class="code-block">
+        <pre>
+// File: package1/package2/MyClass.java
+package package1.package2;
+
+public class MyClass {
+    public void display() {
+        System.out.println("Hello from package1.package2!");
+    }
+}
+        </pre>
+    </div>
+
+    <h2>Using Nested Packages</h2>
+    <p>To use a class from a nested package, import it using its fully qualified name:</p>
+    <div class="code-block">
+        <pre>
+// File: Main.java
+import package1.package2.MyClass;
+
+public class Main {
+    public static void main(String[] args) {
+        MyClass obj = new MyClass();
+        obj.display();
+    }
+}
+        </pre>
+    </div>
+
+    <h2>Extending Nested Packages</h2>
+    <p>You can extend classes from nested packages in another package. Here's an example:</p>
+    <div class="code-block">
+        <pre>
+// File: package3/ExtendedClass.java
+package package3;
+
+import package1.package2.MyClass;
+
+public class ExtendedClass extends MyClass {
+    public void extendedDisplay() {
+        System.out.println("Extended functionality from package3!");
+    }
+}
+        </pre>
+    </div>
+
+    <p>Now, you can use the extended class in your main program:</p>
+    <div class="code-block">
+        <pre>
+// File: Main.java
+import package3.ExtendedClass;
+
+public class Main {
+    public static void main(String[] args) {
+        ExtendedClass obj = new ExtendedClass();
+        obj.display(); // From package1.package2
+        obj.extendedDisplay(); // From package3
+    }
+}
+        </pre>
+    </div>
+</div>
+<div>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/iEDIRPYX90I?si=VeEEsgFa9TRcGQaP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+<footer>
+    <p>&copy; 2024 Java Nested Packages Tutorial. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

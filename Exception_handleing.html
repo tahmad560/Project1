@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exception Handling in Java</title>
+    <style>
+        /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #007BFF;
+}
+
+code {
+    background-color: #f1f1f1;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+pre {
+    background-color: #e9ecef;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Exception Handling in Java</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>What is Exception Handling?</h2>
+            <p>Exception handling in Java is a mechanism to handle runtime errors, allowing the program to continue execution instead of crashing. It involves the use of <code>try</code>, <code>catch</code>, <code>finally</code>, and <code>throw</code> keywords.</p>
+        </section>
+
+        <section>
+            <h2>Why is it Important?</h2>
+            <p>It helps in managing errors gracefully, maintaining program flow, and providing useful error messages to users or developers.</p>
+        </section>
+
+        <section>
+            <h2>Syntax of Exception Handling</h2>
+            <pre>
+<code>
+try {
+    // Code that might throw an exception
+} catch (ExceptionType e) {
+    // Code to handle the exception
+} finally {
+    // Optional code to run after try-catch block
+}
+</code>
+            </pre>
+        </section>
+
+        <section>
+            <h2>Example</h2>
+            <pre>
+<code>
+public class ExceptionExample {
+    public static void main(String[] args) {
+        try {
+            int result = 10 / 0; // This will throw an ArithmeticException
+        } catch (ArithmeticException e) {
+            System.out.println("Error: Division by zero!");
+        } finally {
+            System.out.println("This block always executes.");
+        }
+    }
+}
+</code>
+            </pre>
+        </section>
+
+        <section>
+            <h2>Common Exception Types</h2>
+            <ul>
+                <li><strong>ArithmeticException</strong> - Thrown when there is an error in arithmetic operations.</li>
+                <li><strong>NullPointerException</strong> - Thrown when an object reference is <code>null</code>.</li>
+                <li><strong>ArrayIndexOutOfBoundsException</strong> - Thrown when accessing an invalid array index.</li>
+                <li><strong>FileNotFoundException</strong> - Thrown when attempting to access a file that doesn’t exist.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Best Practices</h2>
+            <ul>
+                <li>Catch specific exceptions instead of a generic <code>Exception</code>.</li>
+                <li>Always use <code>finally</code> to close resources like files or network connections.</li>
+                <li>Do not use exceptions for control flow.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Java Exception Handling Tutorial - All rights reserved.</p>
+    </footer>
+</body>
+</html>
