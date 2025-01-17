@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Projects</title>
+    <style>
+        /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f9;
+}
+
+header {
+    background-color: #0073e6;
+    color: white;
+    padding: 1rem 2rem;
+    text-align: center;
+    border-bottom: 4px solid #005bb5;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    margin: 0.5rem 0 0;
+    font-size: 1.2rem;
+}
+
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Section and Article Styling */
+section {
+    margin-bottom: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+section h2 {
+    background: #005bb5;
+    color: white;
+    margin: 0;
+    padding: 0.8rem;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+article {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #ddd;
+}
+
+article:last-child {
+    border-bottom: none;
+}
+
+article h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #005bb5;
+}
+
+/* Details and Summary Styling */
+details {
+    margin-top: 0.5rem;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0.5rem;
+}
+
+details summary {
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+}
+
+details ul {
+    margin: 0.5rem 0 0;
+    padding-left: 1.5rem;
+}
+
+details pre {
+    background: #eef;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow-x: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    main {
+        padding: 1rem;
+    }
+}
+
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1>Java Projects</h1>
+        <p>Explore different projects based on Java programming concepts. Each project includes hints and expected outputs to guide you.</p>
+    </header>
+
+    <main>
+        <section class="project">
+            <h2>Beginner-Level Projects</h2>
+            <article>
+                <h3>Library Management System</h3>
+                <p><strong>Concepts Used:</strong> Classes and Objects, Methods, Constructors, Access Modifiers, Arrays</p>
+                <p><strong>Description:</strong> Manage books, add/remove them, and maintain records of borrowed and returned books.</p>
+                <details>
+                    <summary>Hints</summary>
+                    <ul>
+                        <li>Create a <code>Book</code> class with attributes like title, author, and status (borrowed/available).</li>
+                        <li>Use an array or ArrayList to store the books.</li>
+                        <li>Implement methods to add, remove, and search for books.</li>
+                    </ul>
+                </details>
+                <details>
+                    <summary>Expected Output</summary>
+                    <pre>
+                        Welcome to the Library Management System
+                        1. Add Book
+                        2. Remove Book
+                        3. Borrow Book
+                        4. Return Book
+                        5. Exit
+                    </pre>
+                </details>
+            </article>
+
+            <article>
+                <h3>To-Do List Application</h3>
+                <p><strong>Concepts Used:</strong> Arrays, Input/Output, Static and Final, Methods</p>
+                <p><strong>Description:</strong> Allow users to add, remove, and mark tasks as complete.</p>
+                <details>
+                    <summary>Hints</summary>
+                    <ul>
+                        <li>Use an array or ArrayList to store tasks.</li>
+                        <li>Implement methods to add tasks, remove tasks, and mark tasks as completed.</li>
+                    </ul>
+                </details>
+                <details>
+                    <summary>Expected Output</summary>
+                    <pre>
+                        To-Do List:
+                        1. Add Task
+                        2. Remove Task
+                        3. Mark Task as Complete
+                        4. View Tasks
+                        5. Exit
+                    </pre>
+                </details>
+            </article>
+        </section>
+
+        <section class="project">
+            <h2>Intermediate-Level Projects</h2>
+            <article>
+                <h3>Bank Account System</h3>
+                <p><strong>Concepts Used:</strong> Classes and Objects, Constructors, Access Modifiers, Inheritance</p>
+                <p><strong>Description:</strong> Simulate bank accounts where users can deposit, withdraw, and transfer money.</p>
+                <details>
+                    <summary>Hints</summary>
+                    <ul>
+                        <li>Create a <code>BankAccount</code> class with attributes like account number, balance, and account holder name.</li>
+                        <li>Implement methods for deposit, withdrawal, and fund transfer.</li>
+                        <li>Use inheritance for different account types (e.g., Savings, Current).</li>
+                    </ul>
+                </details>
+                <details>
+                    <summary>Expected Output</summary>
+                    <pre>
+                        Welcome to the Bank Account System
+                        1. Create Account
+                        2. Deposit Money
+                        3. Withdraw Money
+                        4. Transfer Money
+                        5. Exit
+                    </pre>
+                </details>
+            </article>
+
+            <article>
+                <h3>Basic Inventory Management System</h3>
+                <p><strong>Concepts Used:</strong> Classes and Objects, Inheritance, Arrays, Static and Final, Input/Output</p>
+                <p><strong>Description:</strong> Track items, their quantities, and prices, and update inventory as sales occur.</p>
+                <details>
+                    <summary>Hints</summary>
+                    <ul>
+                        <li>Create an <code>Item</code> class with attributes like name, price, and quantity.</li>
+                        <li>Use an array or ArrayList to store inventory items.</li>
+                        <li>Implement methods to add, update, and view items.</li>
+                    </ul>
+                </details>
+                <details>
+                    <summary>Expected Output</summary>
+                    <pre>
+                        Welcome to the Inventory Management System
+                        1. Add Item
+                        2. Update Item
+                        3. View Inventory
+                        4. Exit
+                    </pre>
+                </details>
+            </article>
+        </section>
+
+        <section class="project">
+            <h2>Advanced-Level Projects</h2>
+            <article>
+                <h3>Online Examination System</h3>
+                <p><strong>Concepts Used:</strong> Classes and Objects, Polymorphism, Input/Output, Conditional Statements, Inheritance</p>
+                <p><strong>Description:</strong> Create a system where users can log in, take exams, and view results.</p>
+                <details>
+                    <summary>Hints</summary>
+                    <ul>
+                        <li>Create a <code>User</code> class with attributes like username and password.</li>
+                        <li>Use polymorphism to handle different question types (e.g., multiple choice, true/false).</li>
+                        <li>Implement methods to validate user login, display questions, and calculate scores.</li>
+                    </ul>
+                </details>
+                <details>
+                    <summary>Expected Output</summary>
+                    <pre>
+                        Welcome to the Online Examination System
+                        1. Login
+                        2. Take Exam
+                        3. View Results
+                        4. Exit
+                    </pre>
+                </details>
+            </article>
+
+            <article>
+                <h3>Mini Social Media App</h3>
+                <p><strong>Concepts Used:</strong> Classes and Objects, Arrays, Methods, Polymorphism, Static and Final</p>
+                <p><strong>Description:</strong> Users can register, post statuses, and view others' posts.</p>
+                <details>
+                    <summary>Hints</summary>
+                    <ul>
+                        <li>Create a <code>User</code> class with attributes like name and a list of posts.</li>
+                        <li>Implement methods to register a user, post a status, and display the feed.</li>
+                    </ul>
+                </details>
+                <details>
+                    <summary>Expected Output</summary>
+                    <pre>
+                        Welcome to the Mini Social Media App
+                        1. Register
+                        2. Post a Status
+                        3. View Feed
+                        4. Exit
+                    </pre>
+                </details>
+            </article>
+
+            <article>
+                <h3>E-Commerce Cart System</h3>
+                <p><strong>Concepts Used:</strong> Inheritance, Polymorphism, Interfaces, Packages</p>
+                <p><strong>Description:</strong> Implement a shopping cart system with features like adding items, calculating totals, and applying discounts.</p>
+                <details>
+                    <summary>Hints</summary>
+                    <ul>
+                        <li>Create a <code>Product</code> class with attributes like name, price, and quantity.</li>
+                        <li>Use interfaces to define discount strategies.</li>
+                        <li>Implement methods to add products to the cart and calculate the total price.</li>
+                    </ul>
+                </details>
+                <details>
+                    <summary>Expected Output</summary>
+                    <pre>
+                        Welcome to the E-Commerce Cart System
+                        1. Add Product to Cart
+                        2. View Cart
+                        3. Checkout
+                        4. Exit
+                    </pre>
+                </details>
+            </article>
+
+            <article>
+                <h3>Employee Management System</h3>
+                <p><strong>Concepts Used:</strong> Classes and Objects, Constructors, Inheritance, Access Modifiers, Encapsulation</p>
+                <p><strong>Description:</strong> Track employee details, calculate salaries, and generate reports.</p>
+                <details>
+                    <summary>Hints</summary>
+                    <ul>
+                        <li>Create an <code>Employee</code> class with attributes like name, ID, and salary.</li>
+                        <li>Use inheritance for different employee types (e.g., full-time, part-time).</li>
+                        <li>Implement methods to add employees, calculate salaries, and display reports.</li>
+                    </ul>
+                </details>
+                <details>
+                    <summary>Expected Output</summary>
+                    <pre>
+                        Welcome to the Employee Management System
+                        1. Add Employee
+                        2. View Employee Details
+                        3. Calculate Salaries
+                        4. Exit
+                    </pre>
+                </details>
+            </article>
+        </section>
+
+        <section class="project">
+            <h2>Expert-Level Projects</h2>
+            <article>
+                <h3>Hospital Management System</h3>
+                <p><strong>Concepts Used:</strong> Classes and Objects, Inheritance, Encapsulation, Polymorphism, Interfaces</p>
+                <p><strong>Description:</strong> Manage patient details, doctors' schedules, and billing.</p>
+                <details>
+                    <summary>Hints</summary>
+                    <ul>
+                        <li>Create classes for <code>Patient</code>, <code>Doctor</code>, and <code>Appointment</code>.</li>
+                        <li>Use encapsulation to protect sensitive patient information.</li>
+                        <li>Implement methods for scheduling appointments and generating bills.</li>
+                    </ul>
+                </details>
+                <details>
+                    <summary>Expected Output</summary>
+                    <pre>
+                        Welcome to the Hospital Management System
+                        1. Add Patient
+                        2. Schedule Appointment
+                        3. Generate Bill
+                        4. Exit
+                    </pre>
+                </details>
+            </article>
+
+            <article>
+                <h3>Chat Application</h3>
+                <p><strong>Concepts Used:</strong> Inheritance, Interfaces, Packages, Polymorphism</p>
+                <p><strong>Description:</strong> Build a simple command-line chat application to exchange messages between users.</p>
+                <details>
+                    <summary>Hints</summary>
+                    <ul>
+                        <li>Create a <code>User</code> class with attributes like username and chat history.</li>
+                        <li>Use interfaces for different chat functionalities like sending and receiving messages.</li>
+                        <li>Implement methods to display chat history and manage users.</li>
+                    </ul>
+                </details>
+                <details>
+                    <summary>Expected Output</summary>
+                    <pre>
+                        Welcome to the Chat Application
+                        1. Register User
+                        2. Send Message
+                        3. View Chat History
+                        4. Exit
+                    </pre>
+                </details>
+            </article>
+
+            <article>
+                <h3>Garbage Collection Visualization</h3>
+                <p><strong>Concepts Used:</strong> Classes and Objects, Garbage Collection, Static and Final</p>
+                <p><strong>Description:</strong> Simulate how objects are created and garbage-collected in memory, providing a visual or log output of the process.</p>
+                <details>
+                    <summary>Hints</summary>
+                    <ul>
+                        <li>Create classes with destructors to log when objects are garbage-collected.</li>
+                        <li>Use <code>System.gc()</code> to force garbage collection for demonstration purposes.</li>
+                        <li>Display the lifecycle of objects in a log format.</li>
+                    </ul>
+                </details>
+                <details>
+                    <summary>Expected Output</summary>
+                    <pre>
+                        Object Created: Object1
+                        Object Created: Object2
+                        Object Collected: Object1
+                        Object Collected: Object2
+                    </pre>
+                </details>
+            </article>
+
+            <article>
+               
