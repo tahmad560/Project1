@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Java Programming Overview</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
     <style>
+        /* General Styles */
         body {
             font-family: 'Roboto', Arial, sans-serif;
             line-height: 1.8;
@@ -16,24 +17,25 @@
         }
 
         header {
-            background: #1c2833; /* Dark blue for header */
+            background: linear-gradient(135deg, #1c2833, #34495e);
             color: #fff;
-            padding: 30px 20px;
+            padding: 40px 20px;
             text-align: center;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            border-bottom: 5px solid #4CAF50; /* Green underline for emphasis */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            border-bottom: 5px solid #4CAF50;
         }
 
         header h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             font-weight: 700;
+            margin: 0;
         }
 
         section {
             max-width: 900px;
             margin: 30px auto;
             background: #fff;
-            padding: 35px;
+            padding: 40px;
             border-radius: 12px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
             border-left: 5px solid #4CAF50;
@@ -41,9 +43,11 @@
 
         h2 {
             color: #34495e;
-            font-size: 2rem;
-            font-weight: 500;
-            margin-bottom: 15px;
+            font-size: 2.2rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 10px;
         }
 
         p {
@@ -52,21 +56,29 @@
             font-size: 1.1rem;
         }
 
-        ul {
-            list-style-type: square;
+        ul, ol {
             margin: 15px 20px;
             color: #555;
             font-size: 1.1rem;
         }
 
+        ul {
+            list-style-type: square;
+        }
+
+        ol {
+            list-style-type: decimal;
+        }
+
         .code {
-            background: #fafafa;
+            background: #2c3e50;
             padding: 15px;
             border-radius: 8px;
-            font-family: 'Courier New', monospace;
-            color: #2c3e50;
-            border: 1px solid #ddd;
+            font-family: 'Source Code Pro', monospace;
+            color: #e0e0e0;
+            border: 1px solid #1c2833;
             margin: 20px 0;
+            overflow-x: auto;
         }
 
         .highlight {
@@ -86,6 +98,7 @@
             max-width: 100%;
             background: #000;
             margin: 30px 0;
+            border-radius: 12px;
         }
 
         .video-container iframe {
@@ -94,6 +107,7 @@
             left: 0;
             width: 100%;
             height: 100%;
+            border: none;
         }
 
         footer {
@@ -117,11 +131,11 @@
             }
 
             h1 {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
 
             h2 {
-                font-size: 1.6rem;
+                font-size: 1.8rem;
             }
 
             p {
@@ -145,6 +159,23 @@
             text-decoration: underline;
         }
 
+        /* Additional Styling */
+        .note {
+            background-color: #fff3cd;
+            border-left: 6px solid #ffc107;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            font-size: 1.1rem;
+        }
+
+        .quote {
+            font-style: italic;
+            color: #777;
+            border-left: 4px solid #4CAF50;
+            padding-left: 15px;
+            margin: 20px 0;
+        }
     </style>
 </head>
 <body>
@@ -160,10 +191,14 @@
             <strong>Key Features:</strong>
             <ul>
                 <li>Robust and secure</li>
-                <li>Automatic memory management</li>
+                <li>Automatic memory management (Garbage Collection)</li>
                 <li>Extensive standard libraries</li>
                 <li>Platform independence</li>
+                <li>Multithreading support</li>
             </ul>
+        </div>
+        <div class="note">
+            <strong>Note:</strong> Java is widely used in enterprise applications, Android development, and large-scale systems.
         </div>
     </section>
 
@@ -176,6 +211,9 @@
             <li><strong>The Birth of Java:</strong> During an intense brainstorming session, the team wanted a name that was unique, dynamic, and memorable. The word "Java" emerged, inspired by their love for coffee. The name not only honored their caffeinated brainstorming sessions but also symbolized energy, creativity, and innovation.</li>
         </ul>
         <p>The coffee theme stuck, which is why Java’s iconic logo features a steaming coffee cup, further connecting the language to its lively origins.</p>
+        <div class="quote">
+            "Java is to JavaScript what car is to carpet." – Chris Heilmann
+        </div>
     </section>
 
     <section>
@@ -187,6 +225,7 @@
             <li>Suitable for multiple application types, including desktop, web, and mobile.</li>
             <li>Strong community support and career opportunities.</li>
             <li>Highly secure and efficient memory management.</li>
+            <li>Scalability for large-scale applications.</li>
         </ul>
     </section>
 
@@ -199,6 +238,7 @@
             <li><strong>Web Applications:</strong> Robust frameworks like Spring.</li>
             <li><strong>Game Development:</strong> Titles like Minecraft.</li>
             <li><strong>Big Data:</strong> Tools like Hadoop and Spark.</li>
+            <li><strong>Cloud Computing:</strong> Java-based cloud services.</li>
         </ul>
     </section>
 
@@ -226,12 +266,15 @@
                             System.out.println("Hello, World!");
                         }
                     }
-                </div>
-            </pre>
+                </div></pre>
             </li>
             <li><strong>Understand Basics:</strong> Learn syntax, data types, and control structures.</li>
             <li><strong>Advanced Learning:</strong> Explore frameworks like Spring, Hibernate, and JavaFX.</li>
+            <li><strong>Practice:</strong> Build projects to solidify your knowledge.</li>
         </ol>
+        <div class="note">
+            <strong>Tip:</strong> Use online platforms like LeetCode, HackerRank, or Codecademy to practice Java programming.
+        </div>
     </section>
 
     <section>
