@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Control Flow - If-Else, Else-If, Nested If-Else, and Switch-Case</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
     <style>
+        /* General Styles */
         * {
             margin: 0;
             padding: 0;
@@ -12,10 +14,10 @@
         }
 
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Roboto', sans-serif;
             background-color: #f4f4f4;
             color: #333;
-            line-height: 1.6;
+            line-height: 1.8;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -74,16 +76,34 @@
         }
 
         pre {
-            background-color: #f1f1f1;
+            background-color: #2c3e50;
             padding: 20px;
             border-radius: 8px;
-            font-family: 'Courier New', monospace;
+            font-family: 'Source Code Pro', monospace;
             font-size: 1.1rem;
             margin-top: 10px;
-            color: #333;
+            color: #e0e0e0;
             overflow-x: auto;
             white-space: pre-wrap;
             word-wrap: break-word;
+        }
+
+        .highlight {
+            background-color: #e8f5e9;
+            border-left: 6px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            font-size: 1.1rem;
+        }
+
+        .note {
+            background-color: #fff3cd;
+            border-left: 6px solid #ffc107;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            font-size: 1.1rem;
         }
 
         .video-container {
@@ -176,6 +196,15 @@ if (age < 13) {
     System.out.println("Adult");
 }
             </pre>
+
+            <div class="highlight">
+                <strong>Key Points:</strong>
+                <ul>
+                    <li>Use <code>else-if</code> for multiple conditions.</li>
+                    <li>The <code>else</code> block is optional.</li>
+                    <li>Conditions must evaluate to a boolean value (<code>true</code> or <code>false</code>).</li>
+                </ul>
+            </div>
         </section>
 
         <section class="nested-if-else">
@@ -209,6 +238,10 @@ if (age >= 18) {
     System.out.println("Not an adult");
 }
             </pre>
+
+            <div class="note">
+                <strong>Tip:</strong> Avoid deeply nested if-else statements as they can make the code harder to read. Consider using logical operators (<code>&&</code>, <code>||</code>) or refactoring the code.
+            </div>
         </section>
 
         <section class="switch-case">
@@ -244,6 +277,15 @@ switch (choice) {
         System.out.println("Invalid choice");
 }
             </pre>
+
+            <div class="highlight">
+                <strong>Key Points:</strong>
+                <ul>
+                    <li>The <code>break</code> statement is used to exit the switch block. Without it, the program will execute all subsequent cases (fall-through).</li>
+                    <li>The <code>default</code> case is optional and runs when no other cases match.</li>
+                    <li>Switch-case works with <code>int</code>, <code>char</code>, <code>String</code>, and enums.</li>
+                </ul>
+            </div>
         </section>
 
         <div class="video-container">
