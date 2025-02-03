@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Java Data Types and Variables</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
     <style>
+        /* General Styles */
         body {
             font-family: 'Roboto', Arial, sans-serif;
             line-height: 1.8;
@@ -16,24 +17,25 @@
         }
 
         header {
-            background: #1c2833; /* Dark blue */
+            background: linear-gradient(135deg, #1c2833, #34495e);
             color: #fff;
-            padding: 30px 20px;
+            padding: 40px 20px;
             text-align: center;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            border-bottom: 5px solid #4CAF50; /* Green underline */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            border-bottom: 5px solid #4CAF50;
         }
 
         header h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             font-weight: 700;
+            margin: 0;
         }
 
         section {
             max-width: 900px;
             margin: 30px auto;
             background: #fff;
-            padding: 35px;
+            padding: 40px;
             border-radius: 12px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
             border-left: 5px solid #4CAF50;
@@ -41,9 +43,11 @@
 
         h2 {
             color: #34495e;
-            font-size: 2rem;
-            font-weight: 500;
-            margin-bottom: 15px;
+            font-size: 2.2rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 10px;
         }
 
         p {
@@ -52,17 +56,26 @@
             font-size: 1.1rem;
         }
 
-        ul {
-            list-style-type: square;
+        ul, ol {
             margin: 15px 20px;
             color: #555;
             font-size: 1.1rem;
+        }
+
+        ul {
+            list-style-type: square;
+        }
+
+        ol {
+            list-style-type: decimal;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
             margin: 20px 0;
+            background: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         table th, table td {
@@ -74,16 +87,35 @@
         table th {
             background-color: #4CAF50;
             color: white;
+            font-weight: 600;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        table tr:hover {
+            background-color: #f1f1f1;
         }
 
         .code {
-            background: #fafafa;
+            background: #2c3e50;
             padding: 15px;
             border-radius: 8px;
-            font-family: 'Courier New', monospace;
-            color: #2c3e50;
-            border: 1px solid #ddd;
+            font-family: 'Source Code Pro', monospace;
+            color: #e0e0e0;
+            border: 1px solid #1c2833;
             margin: 20px 0;
+            overflow-x: auto;
+        }
+
+        .highlight {
+            background-color: #e8f5e9;
+            border-left: 6px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            font-size: 1.1rem;
         }
 
         .video-container {
@@ -94,6 +126,7 @@
             max-width: 100%;
             background: #000;
             margin: 30px 0;
+            border-radius: 12px;
         }
 
         .video-container iframe {
@@ -118,6 +151,7 @@
             margin: 0;
         }
 
+        /* Responsive Design */
         @media (max-width: 768px) {
             section {
                 padding: 20px;
@@ -125,11 +159,11 @@
             }
 
             h1 {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
 
             h2 {
-                font-size: 1.6rem;
+                font-size: 1.8rem;
             }
 
             p {
@@ -140,6 +174,24 @@
                 font-size: 0.9rem;
             }
         }
+
+        /* Additional Styling */
+        .note {
+            background-color: #fff3cd;
+            border-left: 6px solid #ffc107;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            font-size: 1.1rem;
+        }
+
+        .quote {
+            font-style: italic;
+            color: #777;
+            border-left: 4px solid #4CAF50;
+            padding-left: 15px;
+            margin: 20px 0;
+        }
     </style>
 </head>
 <body>
@@ -149,17 +201,25 @@
 
     <section>
         <h2>Introduction to Variables</h2>
-        <p>Variables in Java store data with specific data types. Here's an example:</p>
+        <p>Variables in Java are containers for storing data values. Each variable has a specific data type, which determines the size and layout of the variable's memory.</p>
         <div class="code">
             int age = 25;<br>
             double salary = 50000.50;<br>
             String name = "John";
         </div>
+        <div class="highlight">
+            <strong>Key Points:</strong>
+            <ul>
+                <li>Variables must be declared before use.</li>
+                <li>Java is a statically-typed language, meaning the data type of a variable is known at compile time.</li>
+                <li>Variable names are case-sensitive and cannot start with a number.</li>
+            </ul>
+        </div>
     </section>
 
     <section>
         <h2>Primitive Data Types</h2>
-        <p>Java's primitive types:</p>
+        <p>Java has eight primitive data types, which are the building blocks for data manipulation:</p>
         <table>
             <thead>
                 <tr>
@@ -220,6 +280,9 @@
                 </tr>
             </tbody>
         </table>
+        <div class="note">
+            <strong>Note:</strong> Primitive data types are stored directly in memory and are not objects.
+        </div>
     </section>
 
     <section>
@@ -228,7 +291,16 @@
         <ul>
             <li><strong>String</strong>: Represents a sequence of characters. Example: <code>"Hello, World!"</code></li>
             <li><strong>Arrays</strong>: Stores multiple values of the same type. Example: <code>int[] numbers = {1, 2, 3};</code></li>
+            <li><strong>Classes</strong>: User-defined data types.</li>
+            <li><strong>Interfaces</strong>: Blueprints for classes.</li>
         </ul>
+        <div class="highlight">
+            <strong>Key Points:</strong>
+            <ul>
+                <li>Non-primitive types are stored as references to memory locations.</li>
+                <li>They can be assigned <code>null</code> to indicate the absence of a value.</li>
+            </ul>
+        </div>
     </section>
 
     <section>
@@ -241,6 +313,7 @@
                     <li>Displays the details in a formatted message.</li>
                 </ul>
             </li>
+            <li><strong>Array Operations</strong><br>Write a program to find the sum and average of elements in an array.</li>
         </ol>
     </section>
 
