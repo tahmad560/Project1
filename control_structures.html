@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Conditionals</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: #e6e6e6;
+            line-height: 1.6;
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 40px;
+            color: #7ec8e3;
+            text-shadow: 0 0 15px rgba(126, 200, 227, 0.4);
+            animation: titleGlow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes titleGlow {
+            from { text-shadow: 0 0 10px rgba(126, 200, 227, 0.4); }
+            to { text-shadow: 0 0 20px rgba(126, 200, 227, 0.6); }
+        }
+
+        .concept-card {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border-left: 4px solid #7ec8e3;
+            transition: transform 0.3s ease;
+        }
+
+        .concept-card:hover {
+            transform: translateX(10px);
+        }
+
+        h2 {
+            color: #7ec8e3;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+
+        .code-block {
+            background: #001220;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 15px 0;
+            position: relative;
+            overflow-x: auto;
+        }
+
+        code {
+            font-family: 'Fira Code', monospace;
+            color: #9ef1d3;
+            display: block;
+            white-space: pre-wrap;
+        }
+
+        .example {
+            background: rgba(126, 200, 227, 0.1);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 15px 0;
+            border: 1px solid rgba(126, 200, 227, 0.3);
+        }
+
+        .key-term {
+            color: #ff7aa1;
+            font-weight: 600;
+        }
+
+        .note {
+            background: rgba(255, 229, 143, 0.1);
+            border-left: 4px solid #ffe58f;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 25px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        .copy-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: #7ec8e3;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .copy-button:hover {
+            background: rgba(126, 200, 227, 0.3);
+        }
+
+        .checkmark {
+            display: none;
+            color: #4CAF50;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Conditional Statements in C++</h1>
+        
+        <div class="concept-card">
+            <h2>1. if Statement</h2>
+            <div class="code-block">
+                <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                <code>if (condition) {
+    // code to execute if condition is true
+}</code>
+            </div>
+            <div class="example">
+                <p><span class="key-term">Example:</span> Checking if a number is positive</p>
+                <code>int num = 5;
+if (num > 0) {
+    cout << "Number is positive";
+}</code>
+            </div>
+            <p><span class="key-term">Flow:</span> Executes code block only if condition evaluates to true</p>
+        </div>
+
+        <div class="concept-card">
+            <h2>2. if-else Statement</h2>
+            <div class="code-block">
+                <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                <code>if (condition) {
+    // code if true
+} else {
+    // code if false
+}</code>
+            </div>
+            <div class="example">
+                <p><span class="key-term">Example:</span> Even/Odd check</p>
+                <code>int num = 4;
+if (num % 2 == 0) {
+    cout << "Even";
+} else {
+    cout << "Odd";
+}</code>
+            </div>
+            <p><span class="key-term">Flow:</span> Provides alternative execution path when condition is false</p>
+        </div>
+
+        <div class="concept-card">
+            <h2>3. else-if Ladder</h2>
+            <div class="code-block">
+                <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                <code>if (condition1) {
+    // code 1
+} else if (condition2) {
+    // code 2
+} else {
+    // default code
+}</code>
+            </div>
+            <div class="example">
+                <p><span class="key-term">Example:</span> Grade classification</p>
+                <code>int score = 85;
+if (score >= 90) {
+    cout << "A";
+} else if (score >= 80) {
+    cout << "B";
+} else if (score >= 70) {
+    cout << "C";
+} else {
+    cout << "D";
+}</code>
+            </div>
+            <p><span class="key-term">Flow:</span> Checks multiple conditions sequentially</p>
+        </div>
+
+        <div class="concept-card">
+            <h2>4. switch Statement</h2>
+            <div class="code-block">
+                <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                <code>switch (expression) {
+    case value1:
+        // code
+        break;
+    case value2:
+        // code
+        break;
+    default:
+        // default code
+}</code>
+            </div>
+            <div class="example">
+                <p><span class="key-term">Example:</span> Day of week</p>
+                <code>int day = 3;
+switch (day) {
+    case 1: cout << "Monday"; break;
+    case 2: cout << "Tuesday"; break;
+    // ... other cases
+    default: cout << "Invalid day";
+}</code>
+            </div>
+            <p><span class="key-term">Note:</span> Works with integral types (int, char, enum)</p>
+        </div>
+
+        <div class="note">
+            <h3>Best Practices</h3>
+            <ul>
+                <li>Use braces {} even for single-line blocks</li>
+                <li>Order conditions from most specific to most general</li>
+                <li>Use switch for multiple equality checks</li>
+                <li>Avoid deep nesting (consider early returns)</li>
+            </ul>
+        </div>
+
+        <div class="note">
+            <h3>Common Mistakes</h3>
+            <ul>
+                <li>Using assignment (=) instead of equality (==)</li>
+                <li>Forgetting break in switch cases</li>
+                <li>Floating-point comparisons without tolerance</li>
+                <li>Unreachable code due to condition ordering</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function copyCode(button) {
+            const codeBlock = button.parentElement;
+            const code = codeBlock.querySelector('code').textContent;
+            
+            navigator.clipboard.writeText(code).then(() => {
+                button.textContent = '✓ Copied!';
+                setTimeout(() => {
+                    button.textContent = 'Copy';
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to C++ Programming</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 2.8em;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: #3498db;
+            margin: 25px 0 15px;
+            font-size: 1.8em;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .code-example {
+            background: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+        }
+
+        .features-list {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
+        .features-list li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .features-list li:before {
+            content: "▹";
+            color: #3498db;
+            position: absolute;
+            left: 0;
+        }
+
+        .button {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 15px;
+            transition: background 0.3s ease;
+        }
+
+        .button:hover {
+            background: #2980b9;
+        }
+
+        .breadcrumb {
+            margin-bottom: 25px;
+            font-size: 0.9em;
+            color: #7f8c8d;
+        }
+
+        .breadcrumb a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="/">Home</a> &gt; <a href="/cpp-tutorials">C++ Tutorials</a> &gt; Introduction
+        </div>
+
+        <h1>Introduction to C++ Programming</h1>
+
+        <section class="content-section">
+            <h2>What is C++?</h2>
+            <p>C++ is a powerful, high-performance programming language created by <strong>Bjarne Stroustrup</strong> in 1985. It extends the C language with object-oriented features while maintaining efficiency for system-level programming.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Key Features</h2>
+            <ul class="features-list">
+                <li>Object-Oriented Programming (OOP)</li>
+                <li>High Performance</li>
+                <li>Memory Management Control</li>
+                <li>Cross-Platform Development</li>
+                <li>Rich Standard Library</li>
+                <li>Template Metaprogramming</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Basic Syntax Example</h2>
+            <div class="code-example">
+                <pre><code>#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+    // Simple output statement
+    cout &lt;&lt; "Hello, World!";
+    return 0;
+}</code></pre>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>Why Learn C++?</h2>
+            <p>C++ is ideal for developing:</p>
+            <ul class="features-list">
+                <li>Operating Systems</li>
+                <li>Game Engines</li>
+                <li>High-Performance Applications</li>
+                <li>Embedded Systems</li>
+                <li>Financial Systems</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Getting Started</h2>
+            <p>To begin programming in C++:</p>
+            <ol class="features-list">
+                <li>Install a C++ compiler (GCC, Clang, or MSVC)</li>
+                <li>Choose an IDE (Visual Studio, Code::Blocks, or CLion)</li>
+                <li>Learn basic syntax and data types</li>
+                <li>Practice with simple programs</li>
+            </ol>
+            <a href="/cpp-getting-started" class="button">Start Learning Now</a>
+        </section>
+    </div>
+</body>
+</html>

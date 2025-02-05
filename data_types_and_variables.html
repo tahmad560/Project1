@@ -1,331 +1,294 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Java Data Types and Variables</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-        /* General Styles */
-        body {
-            font-family: 'Roboto', Arial, sans-serif;
-            line-height: 1.8;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f7fc;
-            color: #333;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C++ Basics: Data Types, Variables, and I/O</title>
+  <style>
+    /* CSS Variables for easy theming */
+    :root {
+        --primary-color: #2c3e50;
+        --secondary-color: #3498db;
+        --accent-color: #e74c3c;
+        --text-color: #333;
+        --bg-color: #f8f9fa;
+        --code-bg: #1e1e1e;
+        --border-radius: 8px;
+    }
+
+    /* General Styling */
+    body {
+        font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        margin: 0;
+        padding: 0;
+        line-height: 1.7;
+        font-size: 1.1rem;
+    }
+
+    /* Container */
+    .container {
+        max-width: 800px;
+        margin: 2rem auto;
+        padding: 2.5rem;
+        background: #fff;
+        border-radius: var(--border-radius);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        transition: transform 0.2s ease;
+    }
+
+    .container:hover {
+        transform: translateY(-2px);
+    }
+
+    /* Typography */
+    h1, h2, h3 {
+        color: var(--primary-color);
+        font-weight: 600;
+        margin: 0 0 1.5rem;
+    }
+
+    h1 {
+        font-size: 2.8rem;
+        text-align: center;
+        position: relative;
+        padding-bottom: 1rem;
+    }
+
+    h1::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 120px;
+        height: 3px;
+        background: var(--secondary-color);
+        border-radius: 2px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+        margin-top: 3rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid #eee;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+        color: var(--secondary-color);
+        margin: 2rem 0 1rem;
+    }
+
+    /* Code Blocks */
+    pre {
+        background: var(--code-bg);
+        color: #dcdcdc;
+        padding: 1.5rem;
+        border-radius: var(--border-radius);
+        overflow-x: auto;
+        font-size: 0.95rem;
+        margin: 1.5rem 0;
+        box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.2);
+        position: relative;
+    }
+
+    pre code {
+        font-family: 'Fira Code', 'Courier New', monospace;
+        display: block;
+        line-height: 1.6;
+    }
+
+    pre::before {
+        content: 'C++';
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.1);
+        color: #888;
+        padding: 0.3rem 1rem;
+        font-size: 0.8rem;
+        border-radius: 0 0 0 var(--border-radius);
+    }
+
+    /* Lists */
+    ul {
+        margin: 1.5rem 0;
+        padding-left: 1.5rem;
+    }
+
+    ul li {
+        margin-bottom: 1rem;
+        padding-left: 1.5rem;
+        position: relative;
+    }
+
+    ul li::before {
+        content: '▹';
+        position: absolute;
+        left: 0;
+        color: var(--secondary-color);
+        font-weight: bold;
+    }
+
+    /* Video Container */
+    .video-container {
+        background: var(--primary-color);
+        border-radius: var(--border-radius);
+        padding: 1rem;
+        margin: 2rem 0;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .video-container iframe {
+        border-radius: var(--border-radius);
+        display: block;
+        margin: 0 auto;
+        border: none;
+    }
+
+    /* Interactive Elements */
+    a {
+        color: var(--secondary-color);
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+
+    a:hover {
+        color: var(--accent-color);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 850px) {
+        .container {
+            margin: 1rem;
+            padding: 1.5rem;
         }
 
-        header {
-            background: linear-gradient(135deg, #1c2833, #34495e);
-            color: #fff;
-            padding: 40px 20px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            border-bottom: 5px solid #4CAF50;
-        }
-
-        header h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin: 0;
-        }
-
-        section {
-            max-width: 900px;
-            margin: 30px auto;
-            background: #fff;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            border-left: 5px solid #4CAF50;
+        h1 {
+            font-size: 2.2rem;
         }
 
         h2 {
-            color: #34495e;
-            font-size: 2.2rem;
-            font-weight: 600;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #4CAF50;
-            padding-bottom: 10px;
+            font-size: 1.6rem;
         }
 
-        p {
-            margin: 15px 0;
-            color: #555;
-            font-size: 1.1rem;
+        pre {
+            font-size: 0.9rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        body {
+            font-size: 1rem;
         }
 
-        ul, ol {
-            margin: 15px 20px;
-            color: #555;
-            font-size: 1.1rem;
+        h1 {
+            font-size: 1.8rem;
         }
 
-        ul {
-            list-style-type: square;
-        }
-
-        ol {
-            list-style-type: decimal;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-            background: #fff;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        table th, table td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
-        }
-
-        table th {
-            background-color: #4CAF50;
-            color: white;
-            font-weight: 600;
-        }
-
-        table tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-
-        table tr:hover {
-            background-color: #f1f1f1;
-        }
-
-        .code {
-            background: #2c3e50;
-            padding: 15px;
-            border-radius: 8px;
-            font-family: 'Source Code Pro', monospace;
-            color: #e0e0e0;
-            border: 1px solid #1c2833;
-            margin: 20px 0;
-            overflow-x: auto;
-        }
-
-        .highlight {
-            background-color: #e8f5e9;
-            border-left: 6px solid #4caf50;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 8px;
-            font-size: 1.1rem;
+        h2 {
+            font-size: 1.4rem;
         }
 
         .video-container {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio */
-            height: 0;
-            overflow: hidden;
-            max-width: 100%;
-            background: #000;
-            margin: 30px 0;
-            border-radius: 12px;
+            padding: 0.5rem;
+        }
+    }
+
+    /* Print Styles */
+    @media print {
+        body {
+            background: white;
+            font-size: 12pt;
         }
 
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        footer {
-            text-align: center;
-            padding: 25px;
-            background: #1c2833;
-            color: #fff;
-            font-size: 1.1rem;
-            margin-top: 40px;
-        }
-
-        footer p {
+        .container {
+            box-shadow: none;
             margin: 0;
+            padding: 0;
         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            section {
-                padding: 20px;
-                margin: 10px;
-            }
-
-            h1 {
-                font-size: 2.2rem;
-            }
-
-            h2 {
-                font-size: 1.8rem;
-            }
-
-            p {
-                font-size: 1rem;
-            }
-
-            footer p {
-                font-size: 0.9rem;
-            }
+        pre {
+            page-break-inside: avoid;
         }
-
-        /* Additional Styling */
-        .note {
-            background-color: #fff3cd;
-            border-left: 6px solid #ffc107;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 8px;
-            font-size: 1.1rem;
-        }
-
-        .quote {
-            font-style: italic;
-            color: #777;
-            border-left: 4px solid #4CAF50;
-            padding-left: 15px;
-            margin: 20px 0;
-        }
-    </style>
+    }
+</style>
 </head>
 <body>
-    <header>
-        <h1>Java Data Types and Variables</h1>
-    </header>
+  <div class="container">
+    <h1>C++ Basics: Data Types, Variables, and I/O</h1>
 
+    <!-- Section 1: Input and Output -->
     <section>
-        <h2>Introduction to Variables</h2>
-        <p>Variables in Java are containers for storing data values. Each variable has a specific data type, which determines the size and layout of the variable's memory.</p>
-        <div class="code">
-            int age = 25;<br>
-            double salary = 50000.50;<br>
-            String name = "John";
-        </div>
-        <div class="highlight">
-            <strong>Key Points:</strong>
-            <ul>
-                <li>Variables must be declared before use.</li>
-                <li>Java is a statically-typed language, meaning the data type of a variable is known at compile time.</li>
-                <li>Variable names are case-sensitive and cannot start with a number.</li>
-            </ul>
-        </div>
+      <h2>Input and Output in C++</h2>
+      <p>
+        C++ uses <code>cin</code> for input and <code>cout</code> for output. These are part of the <code>iostream</code> library.
+      </p>
+      <pre><code>#include &lt;iostream&gt;
+  using namespace std;
+  
+  int main() {
+    int age;
+    cout &lt;&lt; "Enter your age: ";  // Output
+    cin &gt;&gt; age;                  // Input
+    cout &lt;&lt; "You are " &lt;&lt; age &lt;&lt; " years old." &lt;&lt; endl;
+    return 0;
+  }</code></pre>
+      <h3>Explanation</h3>
+      <ul>
+        <li><code>cin</code>: Used to take input from the user.</li>
+        <li><code>cout</code>: Used to display output to the console.</li>
+        <li><code>endl</code>: Inserts a newline character.</li>
+      </ul>
     </section>
 
+    <!-- Section 2: Data Types -->
     <section>
-        <h2>Primitive Data Types</h2>
-        <p>Java has eight primitive data types, which are the building blocks for data manipulation:</p>
-        <table>
-            <thead>
-                <tr>
-                    <th>Data Type</th>
-                    <th>Size</th>
-                    <th>Description</th>
-                    <th>Example</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>int</td>
-                    <td>4 bytes</td>
-                    <td>Stores integer values</td>
-                    <td>42</td>
-                </tr>
-                <tr>
-                    <td>float</td>
-                    <td>4 bytes</td>
-                    <td>Stores decimal values</td>
-                    <td>3.14f</td>
-                </tr>
-                <tr>
-                    <td>double</td>
-                    <td>8 bytes</td>
-                    <td>Stores precise decimal values</td>
-                    <td>3.14159</td>
-                </tr>
-                <tr>
-                    <td>char</td>
-                    <td>2 bytes</td>
-                    <td>Stores a single character</td>
-                    <td>'A'</td>
-                </tr>
-                <tr>
-                    <td>boolean</td>
-                    <td>1 bit</td>
-                    <td>Stores true or false</td>
-                    <td>true</td>
-                </tr>
-                <tr>
-                    <td>byte</td>
-                    <td>1 byte</td>
-                    <td>Stores small integer values</td>
-                    <td>127</td>
-                </tr>
-                <tr>
-                    <td>short</td>
-                    <td>2 bytes</td>
-                    <td>Stores medium integer values</td>
-                    <td>32000</td>
-                </tr>
-                <tr>
-                    <td>long</td>
-                    <td>8 bytes</td>
-                    <td>Stores large integer values</td>
-                    <td>123456789L</td>
-                </tr>
-            </tbody>
-        </table>
-        <div class="note">
-            <strong>Note:</strong> Primitive data types are stored directly in memory and are not objects.
-        </div>
+      <h2>Data Types in C++</h2>
+      <p>
+        In C++, data types define the type of data a variable can hold. Here are the most common data types:
+      </p>
+      <ul>
+        <li><strong>int</strong>: Stores integers (e.g., 5, -10).</li>
+        <li><strong>float</strong>: Stores single-precision floating-point numbers (e.g., 3.14).</li>
+        <li><strong>double</strong>: Stores double-precision floating-point numbers (e.g., 3.14159).</li>
+        <li><strong>char</strong>: Stores single characters (e.g., 'A', 'b').</li>
+        <li><strong>bool</strong>: Stores boolean values (true or false).</li>
+        <li><strong>string</strong>: Stores sequences of characters (e.g., "Hello").</li>
+      </ul>
+      <pre><code>int age = 25;
+float pi = 3.14;
+char grade = 'A';
+bool isStudent = true;
+string name = "John Doe";</code></pre>
     </section>
 
+    <!-- Section 3: Variables -->
     <section>
-        <h2>Non-Primitive Data Types</h2>
-        <p>Non-primitive data types are more complex and include:</p>
-        <ul>
-            <li><strong>String</strong>: Represents a sequence of characters. Example: <code>"Hello, World!"</code></li>
-            <li><strong>Arrays</strong>: Stores multiple values of the same type. Example: <code>int[] numbers = {1, 2, 3};</code></li>
-            <li><strong>Classes</strong>: User-defined data types.</li>
-            <li><strong>Interfaces</strong>: Blueprints for classes.</li>
-        </ul>
-        <div class="highlight">
-            <strong>Key Points:</strong>
-            <ul>
-                <li>Non-primitive types are stored as references to memory locations.</li>
-                <li>They can be assigned <code>null</code> to indicate the absence of a value.</li>
-            </ul>
-        </div>
+      <h2>Variables in C++</h2>
+      <p>
+        A variable is a named storage location in memory. To declare a variable, specify its data type and name:
+      </p>
+      <pre><code>int score = 100;  // Declare and initialize
+double price;   // Declare only
+price = 19.99;  // Initialize later</code></pre>
+      <h3>Rules for Variable Names</h3>
+      <ul>
+        <li>Must start with a letter or underscore (<code>_</code>).</li>
+        <li>Can contain letters, numbers, and underscores.</li>
+        <li>Cannot use C++ keywords (e.g., <code>int</code>, <code>double</code>).</li>
+      </ul>
     </section>
 
-    <section>
-        <h2>Practice Problems</h2>
-        <ol>
-            <li><strong>Swap Two Numbers</strong><br>Write a program that swaps the values of two variables without using a third variable.</li>
-            <li><strong>User Input</strong><br>Create a program that:
-                <ul>
-                    <li>Takes user input for their name, age, and salary.</li>
-                    <li>Displays the details in a formatted message.</li>
-                </ul>
-            </li>
-            <li><strong>Array Operations</strong><br>Write a program to find the sum and average of elements in an array.</li>
-        </ol>
+    <!-- Video Section -->
+    <section class="video-container">
+      <h2>Video Tutorial</h2>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/EvaODnU_NJc?si=ark69Rh6RPNIzQTm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </section>
 
-    <section>
-        <h2>Watch the Video</h2>
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/53KUNJBZC3o" title="Java Variables and Data Types" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-    </section>
-
-    <footer>
-        <p>Happy Coding! Keep learning Java.</p>
-    </footer>
+  
+  </div>
 </body>
 </html>
