@@ -139,6 +139,18 @@
             color: #4CAF50;
             margin-left: 10px;
         }
+        .video-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        iframe {
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 560px;
+        }
     </style>
 </head>
 <body>
@@ -261,7 +273,11 @@ switch (day) {
             </ul>
         </div>
     </div>
-
+    <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/WjPRlPLO1_o?si=JPauthyjHAgUUTCA" 
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+        gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
     <script>
         function copyCode(button) {
             const codeBlock = button.parentElement;
